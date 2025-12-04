@@ -1,0 +1,56 @@
+spring:
+  application:
+    name: AetherNet_Backend
+  datasource:
+      url: jdbc:mysql://localhost:3306/aethernet?serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.cj.jdbc.Driver
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  ai:
+    openai:
+      api-key: ${DASHSCOPE_API_KEY}
+      base-url: https://dashscope.aliyuncs.com/compatible-mode
+      chat:
+        options:
+          model: qwen-max
+
+
+# JWT??
+jwt:
+  secret: aethernet
+  ttl: 720000000
+  token-name: Authorization
+
+# mp??
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
+
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# ???????
+aliyun:
+  oss:
+    endpoint: ${ENDPOINT}
+    access-key-id: ${ACCESS_KEY_ID}
+    access-key-secret: ${ACCESS_KEY_SECRET}
+    bucket-name: ${BUCKET_NAME}
+    # custom-domain: your-custom-domain
+
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: false
+    open-api:
+      enabled: false
