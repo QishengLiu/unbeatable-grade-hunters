@@ -1,0 +1,18 @@
+# In application.yml
+spring:
+  ai:
+    deepseek:
+      api-key: sk-9e8160861ebb43a3bf78d22b8bf20db0
+
+    dashscope:
+      api-key: sk-019bcedd770a496d93fde4d7ec139f85
+      embedding:
+        enabled: true
+        options:
+          model: text-embedding-v4
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springai?allowPublicKeyRetrieval=true&useUnicode=true&useSSL=false&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
