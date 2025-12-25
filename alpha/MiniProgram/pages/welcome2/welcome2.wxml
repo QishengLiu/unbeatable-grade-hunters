@@ -1,0 +1,33 @@
+<view class="container">
+  <!-- 进度条 -->
+  <view class="progress-wrapper">
+    <view class="progress-bar">
+      <view class="progress-fill" style="width: {{progressPercentage}}%; " ></view>
+    </view>
+  </view>
+
+
+  <!-- 标题和描述 -->
+  <view class="header-section">
+    <view class="title">让我们更好地了解你</view>
+    <view class="subtitle">选择你使用我们的目的</view>
+  </view>
+
+  <!-- 选项卡片 -->
+  <view class="options-grid">
+    <block wx:for="{{options}}" wx:key="id">
+      <view 
+        class="option-card {{selectedOptions.includes(item.id) ? 'selected' : ''}}"
+        bindtap="toggleOption"
+        data-option="{{item.id}}">
+        <view class="option-text">{{item.label}}</view>
+        <view class="option-check" wx:if="{{selectedOptions.includes(item.id)}}">✓</view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="button-section">
+    <button class="continue-btn" bindtap="handleContinue">继续</button>
+  </view>
+</view>

@@ -1,0 +1,313 @@
+.help-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f7f8fd;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+
+/* 搜索栏样式 */
+.search-bar {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 22px;
+  margin: 12px 16px;
+  padding: 0 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  border: 1px solid #e5e7eb;
+}
+
+.search-icon {
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  height: 100%;
+  font-size: 14px;
+  color: #333;
+  border: none;
+  outline: none;
+}
+
+.search-clear {
+  margin-left: 8px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+}
+
+.search-placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+/* 分类标签样式 */
+.category-tabs {
+  display: flex;
+  padding: 0 16px;
+  overflow-x: auto;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.category-tab {
+  flex-shrink: 0;
+  padding: 6px 16px;
+  background: #ffffff;
+  border-radius: 16px;
+  font-size: 14px;
+  color: #666;
+  white-space: nowrap;
+}
+
+.category-tab.active {
+  background: #1e88e5;
+  color: #ffffff;
+}
+
+/* 帖子列表容器 */
+.posts-container {
+  padding: 0 16px;
+  height: calc(100vh - 160px);
+  overflow-y: scroll;
+  /* 隐藏滚动条 - Webkit浏览器 */
+  padding-right: 20px;
+  margin-right: -20px;
+}
+
+.posts-container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* 兼容其他浏览器 */
+.posts-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.posts-container::-webkit-scrollbar {
+  display: none;
+}
+
+.post-card-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.post-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  width: 100%;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.post-user {
+  flex: 1;
+}
+
+.post-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.post-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.post-tag {
+  font-size: 12px;
+  color: #07C160;
+  background: rgba(7, 193, 96, 0.1);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.post-meta {
+  font-size: 12px;
+  color: #999;
+}
+
+.post-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  display: block;
+  word-break: break-all;
+}
+
+/* 图片展示区域 */
+.post-images-grid {
+  margin-bottom: 12px;
+}
+
+/* 单张图片 */
+.post-image-single {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* 九宫格图片容器 */
+.images-col-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4px;
+}
+
+.images-col-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 4px;
+}
+
+/* 网格图片样式 */
+.grid-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 12px;
+}
+
+.stat-block {
+  display: flex;
+  align-items: center;
+}
+
+.stat-text {
+  font-size: 13px;
+  color: #999;
+}
+
+.load-tip {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #999;
+}
+
+/* 互动区域 */
+.interaction-section {
+  padding: 16px;
+  padding-top: 0;
+}
+
+.interaction-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.interaction-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.interaction-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.interaction-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.interaction-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.interaction-avatar {
+  flex-shrink: 0;
+}
+
+.interaction-avatar image {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e3f2fd;
+}
+
+/* 二手交易区域 */
+.second-hand-section {
+  padding: 16px;
+  padding-top: 0;
+}
+
+/* 底部导航 */
+.tab-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 0;
+  border-top: 1px solid #f0f0f0;
+  margin-top: auto;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  color: #999;
+}
+
+.tab-item.active {
+  color: #1e88e5;
+}
+
+.tab-icon {
+  font-size: 20px;
+}
+
+.tab-label {
+  font-size: 12px;
+}
+

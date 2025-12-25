@@ -1,0 +1,92 @@
+<view class="help-container">
+  <!-- 顶部搜索栏 -->
+  <view class="search-bar">
+    <view class="search-icon">
+      <text>🔍</text>
+    </view>
+    <input class="search-input" 
+           placeholder="搜索" 
+           value="{{keyword}}"
+           bindinput="onKeywordInput"
+           bindconfirm="onSearchConfirm"/>
+    <view class="search-clear" wx:if="{{keyword.length > 0}}" bindtap="clearKeyword">
+      <text>×</text>
+    </view>
+  </view>
+
+  <!-- 分类标签 -->
+  <view class="category-tabs">
+    <view wx:for="{{categories}}" 
+          wx:key="categoryId"
+          class="category-tab {{activeCategory && activeCategory.categoryId === item.categoryId ? 'active' : ''}}"
+          data-category="{{item}}"
+          bindtap="handleCategoryTap">
+      {{item.categoryName}}
+    </view>
+  </view>
+
+  <!-- 帖子列表 -->
+  <view class="posts-container">
+    <block wx:for="{{postList}}" wx:key="postId">
+      <view class="post-card-container">
+        <view class="post-card">
+          <view class="post-header">
+            <image class="post-avatar" src="{{item.avatarUrl || '/image/user_avatar.png'}}" mode="aspectFill"></image>
+            <view class="post-user">
+              <view class="post-row">
+                <text class="post-name">{{item.author}}</text>
+                <text class="post-tag">{{item.category.categoryName}}</text>
+              </view>
+              <text class="post-meta">{{item.createdAt}}</text>
+            </view>
+          </view>
+          <text class="post-text">{{item.content}}</text>
+          
+          <!-- 九宫格图片展示 -->
+          <view wx:if="{{item.images && item.images.length > 0}}" class="post-images-grid">
+            <!-- 单张图片 -->
+            <block wx:if="{{item.images.length === 1}}">
+              <image class="post-image-single" src="{{item.images[0]}}" mode="widthFix"></image>
+            </block>
+            
+            <!-- 多张图片 (2-9张) -->
+            <block wx:elif="{{item.images.length > 1}}">
+              <!-- 2张图片 -->
+              <view wx:if="{{item.images.length === 2}}" class="images-col-2">
+                <image wx:for="{{item.images}}" wx:key="index" class="grid-image" src="{{item}}" mode="aspectFill"></image>
+              </view>
+              
+              <!-- 4张图片 -->
+              <view wx:elif="{{item.images.length === 4}}" class="images-col-2">
+                <image wx:for="{{item.images}}" wx:key="index" class="grid-image" src="{{item}}" mode="aspectFill"></image>
+              </view>
+              
+              <!-- 3,5,6,7,8,9张图片 -->
+              <view wx:else class="images-col-3">
+                <image wx:for="{{item.images}}" wx:key="index" wx:if="{{index < 9}}" class="grid-image" src="{{item}}" mode="aspectFill"></image>
+              </view>
+            </block>
+          </view>
+
+          <view class="post-footer">
+            <view class="stat-block">
+              <text class="stat-text">👍 {{item.likeCount}}</text>
+            </view>
+            <view class="stat-block">
+              <text class="stat-text">💬 {{item.commentCount}}</text>
+            </view>
+            <view class="stat-block">
+              <text class="stat-text">👀 {{item.viewCount}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="load-tip">
+      <text wx:if="{{loading}}">加载中...</text>
+      <text wx:elif="{{hasMore}}">上拉加载更多</text>
+      <text wx:else>没有更多内容了</text>
+    </view>
+  </view>
+</view>

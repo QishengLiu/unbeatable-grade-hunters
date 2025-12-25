@@ -1,0 +1,74 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  
+
+  <!-- Main Content -->
+  <scroll-view class="content" scroll-y="true">
+    <!-- Location Section -->
+    <view class="section">
+      
+      <view class="location-card" bindtap="onLocationTap">
+        <view class="location-icon">📍</view>
+        <view class="location-info">
+          <view class="location-label">当前位置</view>
+          <view class="location-name">{{locationName}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- Search Bar -->
+    <view class="search-section">
+      <view class="search-bar" bindtap="onSearchTap">
+        <view class="search-icon">🔍</view>
+        <input class="search-input" placeholder="你是否在找看什么？" disabled="{{true}}" />
+        <view class="search-filter" bindtap="onFilterTap">☰</view>
+      </view>
+    </view>
+
+    <!-- Banner Card -->
+    <view class="banner-card" bindtap="onBannerTap">
+      <view class="banner-content">
+        <view class="banner-title">{{bannerTitle}}</view>
+        <view class="banner-subtitle">{{bannerSubtitle}}</view>
+        <view class="banner-button">现在预约</view>
+      </view>
+      <view class="banner-image">
+        <image src="{{bannerImage}}" mode="scaleToFill"></image>
+      </view>
+    </view>
+
+    <!-- Quick Start Section -->
+    <view class="quick-start-section">
+      <view class="section-header">
+        <view class="section-label">马上开始</view>
+        
+        <view class="see-more">更多</view>
+      </view>
+      
+        <view class="quick-start-grid">
+        <view class="quick-item" wx:for="{{quickStartItems}}" wx:key="index" bindtap="onQuickItemTap" data-index="{{index}}">
+          <image class="quick-icon-img" src="{{item.icon}}" mode="aspectFit"></image>
+          <view class="quick-title">{{item.title}}</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- Popular Activities Section -->
+    <view class="popular-section">
+      <view class="section-header">
+        <view class="section-label">热门活动</view>
+        <view class="see-more">更多</view>
+      </view>
+
+      <view class="activities-grid">
+        <view class="activity-card" wx:for="{{activities}}" wx:key="id" bindtap="onActivityTap" data-id="{{item.id}}">
+          <image src="{{item.image}}" mode="scaleToFill" class="activity-image"></image>
+          <view class="activity-info">
+            <view class="activity-title">{{item.title}}</view>
+            <view class="activity-meta">{{item.distance}} · {{item.viewers}}人在看</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,94 @@
+<view class="social-page">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <text class="status-time">{{status.time}}</text>
+    <view class="status-icons">
+      <view class="status-signal">
+        <view class="signal-bar bar-1"></view>
+        <view class="signal-bar bar-2"></view>
+        <view class="signal-bar bar-3"></view>
+        <view class="signal-bar bar-4"></view>
+      </view>
+      <view class="status-battery">
+        <view class="battery-body"></view>
+        <view class="battery-head"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 顶部导航 -->
+  <view class="top-bar">
+    <view class="ghost-btn" bindtap="onSearch">
+      <image class="ghost-icon" src="{{assets.search}}" mode="aspectFit"></image>
+    </view>
+    <view class="title-wrap">
+      <text class="app-title">SociaLink</text>
+      <view class="ghost-btn small" bindtap="createPost">
+        <image class="ghost-icon" src="{{assets.compose}}" mode="aspectFit"></image>
+      </view>
+    </view>
+    <image class="mini-avatar" src="{{profile.avatar}}" mode="aspectFill" bindtap="openProfile"></image>
+  </view>
+
+  <!-- 用户快拍 -->
+  <view class="story-strip">
+    <scroll-view scroll-x="true" enable-flex="true" class="story-scroll" show-scrollbar="false">
+      <view class="story-item" wx:for="{{stories}}" wx:key="id" data-id="{{item.id}}" bindtap="openStory">
+        <image class="story-avatar" src="{{item.cover}}" mode="aspectFill"></image>
+        <text class="story-name">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 内容滚动区 -->
+  <scroll-view class="feed-scroll" scroll-y lower-threshold="80" bindscrolltolower="loadMore">
+    <block wx:for="{{postList}}" wx:key="id">
+      <view class="post-card-container">
+        <view class="post-card" bindtap="openPost" data-id="{{item.id}}">
+          <view class="post-header">
+            <image class="post-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+            <view class="post-user">
+              <view class="post-row">
+                <text class="post-name">{{item.author}}</text>
+                <text class="post-tag">{{item.tag}}</text>
+              </view>
+              <text class="post-meta">{{item.meta}}</text>
+            </view>
+            <view class="post-more" catchtap="showMore" data-id="{{item.id}}">
+              <view class="more-dot"></view>
+              <view class="more-dot"></view>
+              <view class="more-dot"></view>
+            </view>
+          </view>
+          <text class="post-text">{{item.content}}</text>
+          <image class="post-image" wx:if="{{item.image}}" src="{{item.image}}" mode="aspectFill"></image>
+
+          <view class="post-footer">
+            <view class="stat-block like {{item.liked ? 'active' : ''}}" catchtap="likePost" data-id="{{item.id}}">
+              <image class="stat-icon" src="{{item.liked ? assets.likeActive : assets.like}}" mode="aspectFit"></image>
+              <text class="stat-text">{{item.likesDisplay}}</text>
+            </view>
+            <view class="stat-block comment" catchtap="commentPost" data-id="{{item.id}}">
+              <image class="stat-icon" src="{{assets.comment}}" mode="aspectFit"></image>
+              <text class="stat-text">{{item.commentsDisplay}}</text>
+            </view>
+            <view class="stat-block ghost" catchtap="sharePost" data-id="{{item.id}}">
+              <image class="stat-icon" src="{{assets.share}}" mode="aspectFit"></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <view class="load-tip">
+      <text wx:if="{{loading}}">加载中...</text>
+      <text wx:elif="{{hasMore}}">上拉加载更多</text>
+      <text wx:else>没有更多内容了</text>
+    </view>
+    <view class="safe-gap"></view>
+  </scroll-view>
+
+  <view class="compose-fab" bindtap="createPost">
+    <image class="fab-icon" src="{{assets.composeWhite}}" mode="aspectFit"></image>
+  </view>
+</view>

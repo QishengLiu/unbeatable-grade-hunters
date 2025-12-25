@@ -1,0 +1,194 @@
+<!--pages/post_create/post_create.wxml-->
+<view class="container">
+  <!-- 状态栏占位 -->
+  <view class="status-bar" style="height: {{statusBarHeight}}px;"></view>
+  
+  <!-- 导航栏 -->
+  <view class="navbar">
+    <text class="navbar-left" bindtap="onCancel">取消</text>
+    <text class="navbar-title">发帖</text>
+    <text class="navbar-right" bindtap="onReset">重置</text>
+  </view>
+
+  <!-- 表单内容区域 -->
+  <scroll-view class="scroll-container" scroll-y>
+    <view class="form-container">
+      <!-- AI生成按钮 -->
+      <view class="ai-generate-section">
+        <button class="ai-generate-btn" bindtap="showAIPromptModal">
+          <image class="ai-icon" src="/image/ai_icon.png" mode="aspectFit"></image>
+          <text class="ai-text">AI生成内容</text>
+        </button>
+      </view>
+
+      <!-- 标题 -->
+      <view class="form-section">
+        <input
+          class="title-input"
+          type="text"
+          placeholder="填写标题，让更多人看到你的内容"
+          maxlength="40"
+          value="{{title}}"
+          bindinput="onTitleInput"
+        />
+      </view>
+
+      <!-- 内容 -->
+      <view class="form-section">
+        <textarea
+          class="content-input"
+          placeholder="分享你的新鲜事..."
+          value="{{content}}"
+          bindinput="onContentInput"
+          maxlength="500"
+          auto-height
+        ></textarea>
+        
+        <!-- 字数统计 -->
+        <view class="word-count">{{content.length}}/500</view>
+      </view>
+
+      <!-- 图片上传区 -->
+      <view class="form-section" wx:if="{{images.length > 0 || true}}">
+        <view class="section-title">添加图片</view>
+        <view class="image-upload-container">
+          <view class="image-list">
+            <view class="image-item" wx:for="{{images}}" wx:key="index">
+              <image class="uploaded-image" src="{{item}}" mode="aspectFill"></image>
+              <view class="remove-image" bindtap="removeImage" data-index="{{index}}">×</view>
+            </view>
+            <view class="image-upload-btn" wx:if="{{images.length < 9}}" bindtap="onAddImage">
+              <view class="upload-icon">+</view>
+              <view class="upload-text">{{images.length}}/9</view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- 分类选择 -->
+      <view class="form-section">
+        <view class="section-title">选择分类</view>
+        <view class="category-selector" bindtap="showCategoryPicker">
+          <view class="selected-category" wx:if="{{selectedCategory}}">{{selectedCategory.name}}</view>
+          <view class="placeholder" wx:else>请选择分类</view>
+          <image class="arrow-icon" src="/image/arrow_down.png" mode="aspectFit"></image>
+        </view>
+      </view>
+
+      <!-- 标签 -->
+      <view class="form-section">
+        <view class="section-title">添加标签</view>
+        <view class="tag-container">
+          <view class="tag-list">
+            <view class="tag-item" wx:for="{{tags}}" wx:key="index">
+              <text class="tag-text">{{item}}</text>
+              <view class="remove-tag" bindtap="removeTag" data-index="{{index}}">×</view>
+            </view>
+          </view>
+          <view class="tag-input-container">
+            <input 
+              class="tag-input" 
+              placeholder="输入标签，按回车添加" 
+              value="{{inputTag}}" 
+              bindinput="onTagInput"
+              bindconfirm="addTag"
+              bindfocus="onTagInputFocus"
+              bindblur="onTagInputBlur"
+            />
+            <button class="add-tag-btn" bindtap="addTag">添加</button>
+          </view>
+          
+          <!-- 标签搜索建议 -->
+          <view class="tag-suggestions" wx:if="{{showTagSuggestions && tagSuggestions.length > 0}}">
+            <view 
+              class="suggestion-item" 
+              wx:for="{{tagSuggestions}}" 
+              wx:key="tagId"
+              bindtap="selectSuggestedTag"
+              data-tag="{{item}}"
+            >
+              {{item.tagName}}
+            </view>
+          </view>
+          
+          <view class="tag-hint">最多可添加5个标签</view>
+        </view>
+      </view>
+
+      <!-- 匿名发布 -->
+      <view class="form-section">
+        <view class="anonymous-container">
+          <view class="anonymous-text">匿名发布</view>
+          <switch 
+            class="anonymous-switch" 
+            checked="{{isAnonymous}}" 
+            bindchange="toggleAnonymous"
+            color="#07C160"
+          />
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 底部操作栏 -->
+  <view class="bottom-actions">
+    <view class="submit-button" bindtap="onSubmit">
+      <text class="submit-text">发布</text>
+    </view>
+  </view>
+
+  <!-- AI提示词输入弹窗 -->
+  <view class="popup-overlay" wx:if="{{showAIPromptModal}}" bindtap="hideAIPromptModal">
+    <view class="popup-content ai-popup" catchtap="stopPropagation">
+      <view class="popup-header">
+        <text class="popup-title">AI生成内容</text>
+        <view class="close-popup" bindtap="hideAIPromptModal">×</view>
+      </view>
+      <view class="ai-prompt-container" catchtap="stopPropagation">
+        <textarea
+          class="ai-prompt-input"
+          placeholder="请输入你想要生成的内容提示，例如：写一篇关于大学生活规划的帖子"
+          value="{{aiPrompt}}"
+          bindinput="onAIPromptInput"
+          maxlength="200"
+          auto-height
+          focus="{{showAIPromptModal}}"
+        ></textarea>
+        <view class="ai-prompt-footer">
+          <text class="prompt-word-count">{{aiPrompt.length}}/200</text>
+          <button class="generate-btn" bindtap="generateWithAI">生成</button>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- AI生成加载弹窗 -->
+  <view class="popup-overlay" wx:if="{{aiGenerating}}" bindtap="stopPropagation">
+    <view class="ai-loading-popup">
+      <view class="loading-spinner"></view>
+      <text class="loading-text">AI正在生成中，请稍候...</text>
+    </view>
+  </view>
+
+  <!-- 分类选择弹窗 -->
+  <view class="popup-overlay" wx:if="{{showCategoryPicker}}" bindtap="hideCategoryPicker">
+    <view class="popup-content" bindtap="stopPropagation">
+      <view class="popup-header">
+        <text class="popup-title">选择分类</text>
+        <view class="close-popup" bindtap="hideCategoryPicker">×</view>
+      </view>
+      <view class="category-list">
+        <view 
+          class="category-item" 
+          wx:for="{{categories}}" 
+          wx:key="id"
+          bindtap="selectCategory"
+          data-category="{{item}}"
+        >
+          <text class="category-name">{{item.name}}</text>
+          <view class="checkmark" wx:if="{{selectedCategory && selectedCategory.id === item.id}}">✓</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

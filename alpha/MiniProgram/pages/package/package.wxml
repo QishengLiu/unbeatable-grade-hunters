@@ -1,0 +1,76 @@
+<view class="package-container">
+  <!-- 顶部返回和标题 -->
+  <view class="package-header">
+    <view class="back-button" bindtap="handleBack">
+      <text>◀</text>
+    </view>
+    <view class="header-title">
+      <text class="title">快递</text>
+      <text class="date">2025年11月20日</text>
+    </view>
+    <text class="help-count">291 回关注他助</text>
+  </view>
+
+  <!-- 地图区域 - 使用微信小程序地图组件 -->
+  <view class="map-section">
+    <map 
+      id="myMap"
+      style="width: 100%; height: 100%;"
+      longitude="113.324520" 
+      latitude="23.102290" 
+      scale="14" 
+      show-location
+      markers="{{markers}}"
+      polyline="{{polyline}}"
+    ></map>
+  </view>
+
+  <!-- 简化的角色展示 -->
+  <view class="character-section">
+    <view class="character-placeholder">角色图片</view>
+    <view class="character-dots">
+      <view class="dot active"></view>
+      <view class="dot"></view>
+      <view class="dot"></view>
+    </view>
+  </view>
+
+  <!-- 任务详情 -->
+  <view class="detail-section">
+    <view class="detail-header">
+      <text class="detail-title">图书馆紧急文件</text>
+      <text class="detail-price">200 以太币</text>
+    </view>
+
+    <!-- 备注 -->
+    <view class="note-section">
+      <text class="note-label">备注</text>
+      <text class="note-content">关于考研的相关材料，需要送到计算机与大数据学院第3-207</text>
+    </view>
+
+    <!-- 发布者信息 -->
+    <view class="publisher-section">
+      <text class="publisher-label">发布者</text>
+      <view class="publisher-info">
+        <view class="publisher-avatar-placeholder">头像</view>
+        <view class="publisher-details">
+          <text class="publisher-name">刘</text>
+          <view class="publisher-tag">
+            <text class="star-icon">⭐</text>
+            <text class="star-text">星级用户 近7天发布10次</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-buttons">
+      <view class="detail-button" bindtap="handleLearnMore">
+        <text>了解更多</text>
+      </view>
+      <view class="accept-button" bindtap="handleAcceptTask">
+        <text>接受任务</text>
+      </view>
+    </view>
+  </view>
+</view>

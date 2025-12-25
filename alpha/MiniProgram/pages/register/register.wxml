@@ -1,0 +1,86 @@
+<view class="register-page">
+  <view class="page-header">
+    <text class="page-title">注册</text>
+    <text class="page-desc">创建账号加入互助校园</text>
+  </view>
+
+  <view class="card">
+    <input
+      class="field-input active"
+      placeholder="学号"
+      placeholder-class="placeholder"
+      type="text"
+      bindinput="bindStudentIdInput"
+      value="{{studentId}}"
+    />
+
+    <input
+      class="field-input"
+      placeholder="手机号码"
+      placeholder-class="placeholder"
+      type="text"
+      bindinput="bindPhoneInput"
+      value="{{phone}}"
+    />
+
+    <view class="password-field">
+      <input
+        class="field-input"
+        placeholder="输入密码"
+        placeholder-class="placeholder"
+        type="{{showPassword ? 'text' : 'password'}}"
+        bindinput="bindPasswordInput"
+        value="{{password}}"
+      />
+      <view class="toggle" bindtap="togglePasswordVisibility">
+        <text>{{showPassword ? '隐藏' : '显示'}}</text>
+      </view>
+    </view>
+
+    <view class="password-field">
+      <input
+        class="field-input"
+        placeholder="重复输入密码"
+        placeholder-class="placeholder"
+        type="{{showConfirmPassword ? 'text' : 'password'}}"
+        bindinput="bindConfirmPasswordInput"
+        value="{{confirmPassword}}"
+      />
+      <view class="toggle" bindtap="toggleConfirmPasswordVisibility">
+        <text>{{showConfirmPassword ? '隐藏' : '显示'}}</text>
+      </view>
+    </view>
+
+    <view class="agreement">
+      <checkbox-group bindchange="handleAgreementChange">
+        <label class="agreement-label">
+          <checkbox 
+            value="agree"
+            checked="{{agreedToTerms}}"
+            class="agreement-checkbox"
+          />
+          <text class="agreement-text">我已阅读并同意</text>
+          <text class="agreement-link" bindtap="viewTerms">《用户协议》</text>
+          <text class="agreement-text">和</text>
+          <text class="agreement-link" bindtap="viewPrivacy">《隐私政策》</text>
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+
+  <view class="actions">
+    <button 
+      class="primary-button {{loading ? 'loading' : ''}}" 
+      bindtap="handleRegister"
+      disabled="{{loading}}"
+    >
+      <block wx:if="{{!loading}}">注册</block>
+      <block wx:else>注册中...</block>
+    </button>
+    
+    <view class="footer-links">
+      <text>已有账号?</text>
+      <text class="link" bindtap="goToLogin">立即登录</text>
+    </view>
+  </view>
+</view>

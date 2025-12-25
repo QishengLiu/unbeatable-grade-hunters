@@ -1,0 +1,59 @@
+<view class="profile-page">
+  <view class="hero-card">
+    <image class="hero-image" src="/images/profile-banner.png" mode="aspectFill"></image>
+    <view class="hero-overlay">
+      <image class="avatar" src="{{userInfo.avatar}}" mode="aspectFill"></image>
+      <view class="user-meta">
+        <text class="username">{{userInfo.username}}</text>
+        <text class="role">{{userInfo.role}}</text>
+      </view>
+      <view class="hero-action" bindtap="goToSettings">
+        <image class="hero-action-icon" src="/image/设置2.png" mode="aspectFit"></image>
+        <text class="hero-action-text">完善信息</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="stats-card">
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.stats.posts}}</text>
+      <text class="stat-label">发布</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.stats.reposts}}</text>
+      <text class="stat-label">转发</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.stats.following}}</text>
+      <text class="stat-label">关注</text>
+    </view>
+    <view class="stat-item">
+      <text class="stat-number">{{userInfo.stats.followers}}</text>
+      <text class="stat-label">粉丝</text>
+    </view>
+  </view>
+
+  <view class="info-card" bindtap="goToSettings">
+    <image class="info-icon" src="/image/设置2.png" mode="aspectFit"></image>
+    <view class="info-text">
+      <text class="info-title">完善信息</text>
+      <text class="info-desc">了解更多关于你的信息</text>
+    </view>
+    <image class="info-arrow" src="/image/箭头.png" mode="aspectFit"></image>
+  </view>
+
+  <view class="shortcut-section">
+    <view class="section-header">
+      <text class="section-title">个人管理</text>
+      <text class="section-subtitle">常用功能入口</text>
+    </view>
+    <view class="shortcut-grid">
+      <block wx:for="{{shortcuts}}" wx:key="type">
+        <view class="shortcut-item" bindtap="handleManagement" data-type="{{item.type}}">
+          <image class="shortcut-icon" src="{{item.icon}}" mode="aspectFit"></image>
+          <text class="shortcut-label">{{item.label}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
