@@ -1,19 +1,12 @@
-# 团队介绍
+# 以太校园——多智能体驱动的校园信息整合平台
 
-| 这个作业属于哪个课程 | https://edu.cnblogs.com/campus/fzu/202501SoftwareEngineering                |
-| -------------------- | --------------------------------------------------------------------------- |
-| 这个作业要求在哪里   | https://edu.cnblogs.com/campus/fzu/202501SoftwareEngineering/homework/13546 |
-| 这个作业的目标       | 完成组队; 撰写博客                                                          |
-
----
-
----
+------
 
 ## 1. 团队 LOGO
 
 ↓↓↓↓ 下面是**项目 logo** ↓↓↓↓
 
-![image](./image/image.png)
+[![image](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/image.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/image.png)
 
 ## 2. 团队名称
 
@@ -27,7 +20,7 @@
 
 > 我们致力于让每一次信息交互都高效省心，让每一份校园资源都精准对接，持续提升信息流动的效率与质量。未来，我们将继续深耕校园场景，聚力构建更智能、更可信的校园生态，让科技真正融入日常，为学生们的校园生活注入更多便捷与温暖。
 
----
+------
 
 ## 3. 项目描述
 
@@ -45,9 +38,7 @@
   > 2. **技术意义**：探索多智能体技术在小型社交与服务系统中的实际落地路径；
   > 3. **社会意义**：促进校园经济循环与共享文化，提升高校信息生态与安全治理水平。
 
-  ---
-
-  
+  ------
 
 - 预期成果
 
@@ -56,258 +47,139 @@
   > 3. 多智能体协同算法与审核撮合机制原型；
   > 4. 校园级数据安全与追责机制方案。
 
-  ---
-
-  
+  ------
 
 - 创新点
 
-|    方向    |                      创新内容                      |
-| :--------: | :------------------------------------------------: |
-|  体系架构  |  引入多智能体模块化架构，实现自治协作与多功能联动  |
-| 智能化能力 |  结合语义检索与规则引擎，实现自动审核与个性化撮合  |
-|  用户机制  |           构建“匿名可追责”的双层身份体系           |
-|  跨端架构  |      实现 Web、小程序、App 三端统一数据与接口      |
-|  应用场景  | 打造面向校园的“需求撮合+任务互助+内容风控”闭环生态 |
+| 方向       | 创新内容                                           |
+| ---------- | -------------------------------------------------- |
+| 体系架构   | 引入多智能体模块化架构，实现自治协作与多功能联动   |
+| 智能化能力 | 结合语义检索与规则引擎，实现自动审核与个性化撮合   |
+| 用户机制   | 构建“匿名可追责”的双层身份体系                     |
+| 跨端架构   | 实现 Web、小程序、App 三端统一数据与接口           |
+| 应用场景   | 打造面向校园的“需求撮合+任务互助+内容风控”闭环生态 |
 
----
-
-
+------
 
 - 研究计划与进度安排
 
-| 周次  |    阶段     |               主要任务               |       预期成果        |
-| :---: | :---------: | :----------------------------------: | :-------------------: |
-| W1-W2 |  需求分析   | 完成需求冻结、系统原型图与数据库设计 |    原型与需求文档     |
-| W3-W4 | Web MVP开发 |   实现发帖、审核、撮合、私聊主流程   |   Web MVP可演示版本   |
-|  W5   | 小程序迁移  |        适配微信登录与推送机制        |    微信小程序原型     |
-|  W6   |  校园测试   |   收集用户反馈与性能数据、优化算法   |     校园内测报告      |
-| 后期  |  App 演进   |        开发推送系统与原生接口        | App Alpha版与扩展报告 |
+| 周次  | 阶段        | 主要任务                             | 预期成果              |
+| ----- | ----------- | ------------------------------------ | --------------------- |
+| W1-W2 | 需求分析    | 完成需求冻结、系统原型图与数据库设计 | 原型与需求文档        |
+| W3-W4 | Web MVP开发 | 实现发帖、审核、撮合、私聊主流程     | Web MVP可演示版本     |
+| W5    | 小程序迁移  | 适配微信登录与推送机制               | 微信小程序原型        |
+| W6    | 校园测试    | 收集用户反馈与性能数据、优化算法     | 校园内测报告          |
+| 后期  | App 演进    | 开发推送系统与原生接口               | App Alpha版与扩展报告 |
 
----
-
-
+------
 
 ## 4. 队员风采
 
-<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <tbody>
-        <tr>
-            <th colspan="3" style="text-align: center; background-color: #e6f7ff; font-size: 18px;">队长介绍</th>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\{OEN4CPUOMHQ_GXN8O@4{XL.png" alt="刘琦晟" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">刘琦晟</div>
-                    <div style="color: #666;">102301227</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">INFJ</div>
-                    <div style="background-color: #b3e5fc; color: #0066cc; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">组长</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“也许有一天我也成为全栈大佬”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">全能型组长，擅长Vue，致力于我组后端 UI 的开发，对于打游戏、睡觉、旅游、摄影方面有着独到见解。</div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+| 队长介绍                                                     |                              |                                                              |
+| ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |
+| [![刘琦晟](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/%7BOEN4CPUOMHQ_GXN8O@4%7BXL.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/{OEN4CPUOMHQ_GXN8O@4{XL.png)刘琦晟102301227INFJ组长 | “也许有一天我也成为全栈大佬” | 全能型组长，擅长Vue，致力于我组后端 UI 的开发，对于打游戏、睡觉、旅游、摄影方面有着独到见解。 |
+
+| 队员介绍                                                     |                                                              |                                                              |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [![陈泽荣](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/Z%603TM7010%60R02SD@9F%7BQNZM.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/Z`3TM7010`R02SD@9F{QNZM.png)陈泽荣102301438ESFJ | “干巴爹&”                                                    | 有前端设计经验，可在前端、UI 或其他灵活分配的岗位工作，游戏爱好培养了交互的敏感性，丰富的经验能确保使其能出色完成。 |
+| [![赵鑫鑫](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/3N~XJ\]K$[L6J@223C[H$4K5.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/3N~XJ]K$[L6J@223C[H$4K5.png)赵鑫鑫102301512LMIS | “干就完了”                                                   | 期望成为后端开发工程师，以沉稳的态度投入到后端开发工作中，在休息好的状态下高效地完成代码编写和系统搭建任务。 |
+| [![王心宏](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/W[2(LF_788R)0VTKYG\]A0UH.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/W[2(LF_788R)0VTKYG]A0UH.png)王心宏102301522ESFP | “跟对人，走对路，做对事。”                                   | 擅长 Python 数据科学栈、Java 后端开发及算法，倾向后端工作，运动和音乐爱好让其保持良好的身心状态，提供稳定的技术支持。 |
+| [![李帅](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/E%7DT\]5K)F7A@TQDXV~AFI%7BI1.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/E}T]5K)F7A@TQDXV~AFI{I1.png)李帅172309011ESTJ | “感谢”                                                       | 熟悉 java 后端技术，从事后端开发，爱好音乐使其在音乐熏陶下在编程时更具创造力和耐心，不断优化后端代码和功能。 |
+| [![李玥彤](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/OOG2[3A7BJXW5HSJ%60R[R0HH.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/OOG2[3A7BJXW5HSJ`R[R0HH.png)李玥彤102301106ESFP | “以赤子之心探未知之境，用恒久之志开未来之局。”               | 擅长 HTML、CSS、JavaScript 技术，专注于前端开发，平常爱好看电影，在电影的熏陶下，能更好地把握色彩搭配、页面布局。 |
+| [![贺之梅](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/%KJNN@DYDTS~KBAT%0%60I@RH.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%KJNN@DYDTS~KBAT%0%60I@RH.png)贺之梅102301108INFJ | “明白自己在学习上还需要更多的主动性和耐心，技术成长是一个持续积累的过程。” | 熟练掌握 C、C++ 编程语言，投身于前端开发工作。在阅读中积累知识、从电影里获取灵感，都巧妙地融入到前端开发中。 |
+| [![俞欢殷](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/ZB1ABHVP~T%60B)4PS1R[(%7B@I.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/ZB1ABHVP~T`B)4PS1R[({@I.png)俞欢殷102301303ISTP | “十分荣幸参与这个项目”                                       | 拥有潜水这项独特技能，热衷于羽毛球、画画和音乐，致力成为一名好组员，凭借其特殊技能，为团队带来创新的视角和积极氛围。 |
+| [![丁浚哲](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/UG%U[_7UW0Z4C_)9DXA%TFX.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/UG%U[_7UW0Z4C_)9DXA%TFX.png)丁浚哲102301437INFJ | “纳尼纳尼，怎怎瓦嘎乃。”                                     | 擅长平面设计，希望负责前端工作，对明日方舟的热爱使其更了解年轻用户的喜好，能够将这种理解融入到前端平面设计中。 |
+| [![孙其煜](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/NJ1$WXHFDYSOI%W5BKIWS77.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/NJ1$WXHFDYSOI%W5BKIWS77.png)孙其煜052201142INFP | “代码如诗，逻辑如画。在0与1的世界里，每一次调试都是与真理的对话。” | 具备全能的技术能力，致力于前端开发工作，在打游戏的过程中或许能获取独特的设计灵感，助力打造更具交互性的前端界面。 |
+| [![张君锋](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/96SL%PK@Q~\]ORWUEK88B%DG.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/96SL%PK@Q~]ORWUEK88B%DG.png)张君锋052204124ENTJ | “希望自己能够尽一份力，从中能够学到一些内容。”               | 拥有量化方面的专长，全能型组员，无论是何种岗位都能积极适应，凭借自身对健身的热情，能为项目带来不一样的活力。 |
+| [![卢铃颖](https://github.com/QishengLiu/unbeatable-grade-hunters/raw/main/image/%7B(K28\]%60Q2%7D%%%60X7%60C0)1485.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%7B(K28]%60Q2%7D%%%60X7%60C0)1485.png)卢铃颖102301105ENFP | “行百里者半九十”                                             | 掌握 Python、C / C++ 技术，渴望尝试不同软工角色，丰富的兴趣让其思维开阔，能为项目带来多元化的解决方案。 |
+
+## 5. 队员风采
+
+###  特色功能一：完整可跑通的业务流程的校园论坛
+
+该功能主要用于校园内学生之间的互助与交流，用户可以在论坛上发布问题或分享经验，并与其他同学进行评论互动。完整的业务流程包括：  
+
+​	1.**注册与登录**：用户可快速注册账户并进行身份校验，保证校园内真实用户参与。  
+
+​	2.**发帖**：支持标题、正文、标签填写及图片上传，一键发布帖子。  
+
+​	3.**内容展示与互动**：审核通过的帖子展示在首页信息流或列表页，用户可以浏览、点赞、评论，形成完整互动链路。   
+
+**展示截图 / 视频：**
+
+![95245b22d4242c0a0120c273b0106118](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\95245b22d4242c0a0120c273b0106118.png)
+
+------
+
+### 特色功能二：集互助、二手、交流多功能于一体
+
+**功能说明：**
+通过该功能，系统能够为校园用户提供多样化的交流与互助场景，整合互助问答、二手交易和普通交流三类功能：  
+
+1. **互助问答**：学生可以发布学术问题、学习经验或生活互助需求，其他用户可进行回答或提供资源支持。  
+2. **二手交易**：支持发布二手物品信息，包括图片、价格、交易方式等，让学生方便地买卖闲置物品。  
+3. **校园交流**：学生可以分享校园生活、兴趣爱好或社团活动信息，促进同学间互动和社交。  
+
+**展示截图 / 视频：**
+
+![c390bbfdad24ae7e2cd93b0eb767e3a5](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\c390bbfdad24ae7e2cd93b0eb767e3a5.png)
+
+------
+
+### 特色功能三：接入AI完善用户与管理端体验
+
+**功能说明：**
+
+该功能通过 AI 技术提升用户发帖体验和管理端内容审核效率，包括：  
+
+1. **AI 审核**：对帖子内容进行语义分析，识别攻击性言论、灰色表达、潜在风险内容，给出风险等级和理由，辅助平台发现擦边词和违规行为。  
+
+2. **AI 发帖助手**：在发帖页面，用户输入关键词或草稿，AI 返回优化后的标题、正文和标签建议，辅助用户快速生成优质内容。  
+
+3. **三层审核机制**：硬规则优先、AI 审核辅助、人工复核最终裁决，保障内容安全可控。
+
+**展示截图 / 视频：**
+
+![cea8a1bcc3bd19964779eec2c44abe38](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\cea8a1bcc3bd19964779eec2c44abe38.png)
 
 
 
+## 6.团队成员项目收获
 
-<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-    <tbody>
-        <tr>
-            <th colspan="3" style="text-align: center; background-color: #e6f7ff; font-size: 18px;">队员介绍</th>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\Z`3TM7010`R02SD@9F{QNZM.png" alt="陈泽荣" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">陈泽荣</div>
-                    <div style="color: #666;">102301438</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ESFJ</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“干巴爹&”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">有前端设计经验，可在前端、UI 或其他灵活分配的岗位工作，游戏爱好培养了交互的敏感性，丰富的经验能确保使其能出色完成。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\3N~XJ]K$[L6J@223C[H$4K5.png" alt="赵鑫鑫" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">赵鑫鑫</div>
-                    <div style="color: #666;">102301512</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">LMIS</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“干就完了”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">期望成为后端开发工程师，以沉稳的态度投入到后端开发工作中，在休息好的状态下高效地完成代码编写和系统搭建任务。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\W[2(LF_788R)0VTKYG]A0UH.png" alt="王心宏" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">王心宏</div>
-                    <div style="color: #666;">102301522</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ESFP</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“跟对人，走对路，做对事。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">擅长 Python 数据科学栈、Java 后端开发及算法，倾向后端工作，运动和音乐爱好让其保持良好的身心状态，提供稳定的技术支持。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\E}T]5K)F7A@TQDXV~AFI{I1.png" alt="李帅" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">李帅</div>
-                    <div style="color: #666;">172309011</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ESTJ</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“感谢”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">熟悉 java 后端技术，从事后端开发，爱好音乐使其在音乐熏陶下在编程时更具创造力和耐心，不断优化后端代码和功能。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\OOG2[3A7BJXW5HSJ`R[R0HH.png" alt="李玥彤" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">李玥彤</div>
-                    <div style="color: #666;">102301106</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ESFP</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“以赤子之心探未知之境，用恒久之志开未来之局。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">擅长 HTML、CSS、JavaScript 技术，专注于前端开发，平常爱好看电影，在电影的熏陶下，能更好地把握色彩搭配、页面布局。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\%KJNN@DYDTS~KBAT%0`I@RH.png" alt="贺之梅" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">贺之梅</div>
-                    <div style="color: #666;">102301108</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">INFJ</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“明白自己在学习上还需要更多的主动性和耐心，技术成长是一个持续积累的过程。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">熟练掌握 C、C++ 编程语言，投身于前端开发工作。在阅读中积累知识、从电影里获取灵感，都巧妙地融入到前端开发中。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\ZB1ABHVP~T`B)4PS1R[({@I.png" alt="俞欢殷" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">俞欢殷</div>
-                    <div style="color: #666;">102301303</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ISTP</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“十分荣幸参与这个项目”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">拥有潜水这项独特技能，热衷于羽毛球、画画和音乐，致力成为一名好组员，凭借其特殊技能，为团队带来创新的视角和积极氛围。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\UG%U[_7UW0Z4C_)9DXA%TFX.png" alt="丁浚哲" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">丁浚哲</div>
-                    <div style="color: #666;">102301437</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">INFJ</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“纳尼纳尼，怎怎瓦嘎乃。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">擅长平面设计，希望负责前端工作，对明日方舟的热爱使其更了解年轻用户的喜好，能够将这种理解融入到前端平面设计中。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\NJ1$WXHFDYSOI%W5BKIWS77.png" alt="孙其煜" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">孙其煜</div>
-                    <div style="color: #666;">052201142</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">INFP</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“代码如诗，逻辑如画。在0与1的世界里，每一次调试都是与真理的对话。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">具备全能的技术能力，致力于前端开发工作，在打游戏的过程中或许能获取独特的设计灵感，助力打造更具交互性的前端界面。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\96SL%PK@Q~]ORWUEK88B%DG.png" alt="张君锋" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">张君锋</div>
-                    <div style="color: #666;">052204124</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ENTJ</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“希望自己能够尽一份力，从中能够学到一些内容。”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">拥有量化方面的专长，全能型组员，无论是何种岗位都能积极适应，凭借自身对健身的热情，能为项目带来不一样的活力。</div>
-            </td>
-        </tr>
-        <tr>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="display: flex; flex-direction: column; align-items: center;">
-                    <img src=".\image\{(K28]`Q2}%%`X7`C0)1485.png" alt="卢铃颖" style="width: 60px; height: 60px; border-radius: 50%; margin-bottom: 5px;" />
-                    <div style="font-weight: bold; color: #0066cc;">卢铃颖</div>
-                    <div style="color: #666;">102301105</div>
-                    <div style="background-color: #a0d8f0; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px; margin-top: 5px;">ENFP</div>
-                </div>
-            </td>
-            <td style="width: 33%; padding: 10px; text-align: center;">
-                <div style="font-style: italic; font-size: 16px; line-height: 1.5;">“行百里者半九十”</div>
-            </td>
-            <td style="width: 33%; padding: 10px; background-color: #99d9f4; color: black; text-align: center;">
-                <div style="font-size: 14px; line-height: 1.5;">掌握 Python、C / C++ 技术，渴望尝试不同软工角色，丰富的兴趣让其思维开阔，能为项目带来多元化的解决方案。</div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+------
 
+**102301227 刘琦晟**：
+在Beta冲刺阶段，我主要负责项目成果的汇报与发布会演讲筹备。为了清晰、生动地呈现我们团队的产品价值，我深入理解了系统架构、核心功能与技术亮点，并反复打磨演示逻辑与表达方式。这一过程不仅锻炼了我的技术总结与沟通能力，也让我学会如何站在用户和听众的角度思考：怎样讲才能让人“听懂、记住、心动”。同时，在与队友协作梳理产品故事线的过程中，我更深刻体会到团队目标一致、分工协同的重要性。这次汇报经历让我明白，再优秀的产品也需要有力的表达来传递价值——技术是骨架，而讲述是灵魂。
 
-​        
+**102301106 李玥彤**：
+Beta冲刺中，我专注于界面细节优化。在Alpha阶段完成基础功能后，我们为保障核心功能与用户体验进行了适当变更，我积极配合团队，调整前端界面，使产品更加美观，布局更为和谐。通过这段经历，我深入理解了项目从设计到落地的全流程，并熟练掌握了开发工具的使用。未来将继续精进技术，持续优化用户体验，提升综合开发能力。
 
+**102301105 卢铃颖**：
+Beta阶段中，我主要负责对已有小程序前端界面进行细节优化，包括调整布局、统一视觉风格、优化交互动效等。在这一过程中，我配合团队的设计变更，逐步解决了多端样式适配与布局对齐的实际问题，进一步提升页面的整体协调性与用户体验。通过持续的调试与迭代，我更深刻地体会到前端实现不仅是代码转化，更是对设计意图的理解与还原，这也推动我在实践中不断沉淀经验、提升精细化开发的能力。
 
+**102301108 贺之梅**：
+在这次Beta冲刺中，我深刻体会到从设计稿到实际页面的转化并非简单的技术实现，而是一个需要不断权衡与调试的过程。在配合团队完成功能模块的过程中，我逐渐认识到沟通与协作的重要性，也学会了在遇到样式兼容、布局偏差等问题时保持耐心、主动寻求解决方法。每一次调试和优化都让我更明白，扎实的基础和持续的学习才是应对变化的底气。这段经历不仅提升了我的实操能力，也让我更清晰地看到自己未来成长的方向。
 
+**052204124 张君峰**：
+这次 Beta 冲刺让我从“把功能写出来”转向“把产品用顺”。我们不再追求新增功能，而是集中修复互助任务状态不同步、头像上传链路不完整、错误提示不清晰等问题。虽然改动多是细节，但当完整走通“发布—接单—放弃—回到大厅”的流程时，系统第一次显得真正连贯。通过每日同步和取舍功能范围，我也逐渐意识到，Beta 阶段更重要的是稳定交付，而不是功能数量。
 
+**172309011 李帅**：
+通过参与本次软工项目，我在后端开发与前后端联调中收获颇丰。不仅巩固了接口设计与数据库优化的能力，更深刻体会到沟通与协作的重要性——联调过程中，与前端同学的及时对齐、日志排查与数据验证，让我明白了“规范”与“耐心”在实际工程中的关键作用。团队合作让代码真正跑通、产品完整落地，这比单纯编写功能更有成就感。
 
+**102301512 赵鑫鑫**：
+Beta 冲刺对我而言，不仅是代码实战能力的沉淀，更是一场从写好代码到服务好团队的认知蜕变。我意识到：混乱的自由是效率的敌人，而“规范”才是最大的体贴。我开始学着走出自己的代码世界，站在队友的视角去审视每一个接口——不仅仅是追求无误，更是追求易用与清晰。所谓的“规范”，其实是我们为团队效率筑起的一道防线。当我不再局限于眼前的一亩三分地，而是开始思考如何通过标准化的输出来降低沟通成本时，我发现自己能为项目带来的价值被成倍放大了。这种从局部到全局的视野提升，让我不再仅仅满足于代码的运行，而是更加在乎整个系统在协作流转中的稳健与从容。
 
+**102301522 王心宏**：
+在Beta冲刺阶段，我深刻体会到“联调与测试”是软件工程中连接前后端的关键纽带。作为测试负责人，我的重心在于从全局视角审视系统的可靠性，通过排除8081端口冲突、升级后端CORS跨域策略等环境“顽疾”，确保了前后端数据的真实联通。在独立完成管理端前端敏感词模块全栈设计的过程中，我意识到测试不应只是发现Bug，更应是对业务逻辑闭环与数据一致性的严苛审计。虽然为了演示流程在架构上做了部分折衷，但这种“守护链路”的实践让我明白，优秀的工程能力不仅体现在代码编写上，更体现在对系统稳定运行的长期负责。
 
+**052201142 孙其煜**：
+通过本次Beta冲刺，我深刻体会到从“能用”到“好用”之间的巨大差距。在Alpha阶段我们完成了核心功能，但Beta阶段才是真正打磨产品体验的关键时期。为了突出我们的“杀手级功能”，团队反复迭代交互逻辑、优化响应速度，并首次引入了自动化单元测试，确保关键模块稳定可靠。我在协作中不仅提升了技术实现能力，更学会了如何站在用户角度思考问题——软件不仅是代码的堆砌，更是解决真实需求的工具。发布会形式的“销售”环节也让我意识到：再好的产品，也需要清晰、有感染力的表达才能被看见。这次冲刺让我对软件工程的全流程有了更完整的理解，也更加敬畏“交付”二字的分量。
+
+**102301437 丁浚哲**：
+在Beta阶段，我专注于设计系统的落地维护和设计资产的管理。我创建了所有组件的变体库和使用实例，确保任何设计调整都能全局同步。最大的收获是掌握了用设计工具进行管理的方法，使得UI在快速迭代中依然保持。同时，我也更深入地参与到用户反馈的收集与分析中，理解了数据如何反哺设计迭代，让我的设计思维更加闭环。
+
+**102301303 俞欢殷**：
+在这次Beta冲刺我深刻认识到从“有逻辑”到“有体验”之间存在漫长的打磨之路。前期我们实现了信息架构与功能闭环，但后期才是真正塑造产品气质与使用心流的关键阶段。为了强化我们的“核心记忆点”，团队持续推敲动效细节、统一视觉语言，并系统性地建立了设计走查清单，确保体验层面的一致与精致。我在执行中不仅锻炼了设计落地的精准度，更学会了如何站在业务与开发的交界处思考方案。面向团队的设计评审与价值传达，这次经历让我对产品从概念到落地的完整周期有了更立体的感知，也更加理解“体验闭环”背后的重量。
+
+**102301438 陈泽荣**：
+在Beta冲刺阶段，我主要负责UI设计、自动化测试以及团队博客的撰写工作。通过深入参与，我不仅提升了Figma原型设计与React组件实现的协同能力，更认识到“以用户为中心”的设计不是一句口号——每一次交互细节的打磨都直接影响产品的易用性与专业感。在编写自动化测试时，我学会了用Jest和React Testing Library对核心功能进行覆盖，确保代码迭代不破坏现有体验。同时，撰写博客让我系统梳理了项目演进逻辑，锻炼了技术表达能力。这次全栈式参与让我体会到，一个优秀的产品，既需要美观流畅的界面，也需要坚实可靠的代码保障，而文档则是连接团队与用户的桥梁。
