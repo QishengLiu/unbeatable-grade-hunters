@@ -1,0 +1,78 @@
+<!--pages/index/index.wxml-->
+<view class="home-container">
+  
+  <!-- 1. Custom Top Navigation (Fixed) -->
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-center">
+      <text class="app-name">AetherNet</text>
+    </view>
+  </view>
+
+  <!-- 2. Scrollable Content -->
+  <scroll-view class="main-scroll" scroll-y="true" enable-flex="true">
+    <view class="content-wrapper">
+      
+      <!-- Banner Section -->
+      <view class="banner-section">
+        <view class="banner-card">
+          <image class="banner-bg" src="{{banner.image}}" mode="aspectFill"></image>
+          <view class="banner-overlay">
+            <view class="banner-text">
+              <text class="banner-title">{{banner.title}}</text>
+              <text class="banner-subtitle">{{banner.subtitle}}</text>
+            </view>
+            <view class="banner-btn">
+              <text>立即查看</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- Category Grid -->
+      <view class="category-section">
+        <view class="category-grid">
+          <view class="category-item {{activeCategoryId === item.id ? 'active' : ''}}" wx:for="{{categories}}" wx:key="id" bindtap="onCategoryTap" data-path="{{item.path}}" data-id="{{item.id}}">
+            <view class="cat-icon-box">
+              <image class="cat-icon" src="{{item.icon}}" mode="aspectFit"></image>
+            </view>
+            <text class="cat-name">{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+
+      <!-- Recommendation Flow -->
+      <view class="recommend-section">
+        <view class="section-header">
+          <text class="section-title">为你推荐</text>
+        </view>
+        
+        <view class="card-flow">
+          <view class="flow-card" wx:for="{{recommendations}}" wx:key="id" bindtap="onCardTap" data-id="{{item.id}}">
+            <view class="card-cover-box">
+              <image class="card-cover" src="{{item.image}}" mode="aspectFill"></image>
+            </view>
+            <view class="card-content">
+              <text class="card-title">{{item.title}}</text>
+              <text class="card-desc">{{item.desc}}</text>
+              <view class="card-footer">
+                <view class="card-action">
+                  <image class="action-icon" src="https://img.icons8.com/fluency-systems-regular/48/999999/like.png"></image>
+                  <text class="action-num">{{item.likes}}</text>
+                </view>
+                <view class="card-action">
+                  <image class="action-icon" src="https://img.icons8.com/fluency-systems-regular/48/999999/speech-bubble.png"></image>
+                  <text class="action-num">{{item.comments}}</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- Bottom Spacer -->
+      <view class="bottom-spacer"></view>
+
+    </view>
+  </scroll-view>
+
+</view>

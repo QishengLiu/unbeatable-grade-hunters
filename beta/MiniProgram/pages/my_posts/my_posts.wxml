@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-content">
+      <view class="back-btn" bindtap="handleBack">
+        <image class="back-icon" src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"></image>
+      </view>
+      <text class="page-title">我的动态</text>
+      <view class="placeholder"></view>
+    </view>
+  </view>
+
+  <scroll-view class="post-scroll" scroll-y>
+    <view class="post-list">
+      <view class="empty-state" wx:if="{{posts.length === 0 && !loading}}">
+        <text>暂无动态</text>
+      </view>
+
+      <block wx:for="{{posts}}" wx:key="id">
+        <view class="post-card" bindtap="viewDetail" data-post-id="{{item.id}}">
+          <image class="post-cover" src="{{item.cover}}" mode="aspectFill"></image>
+          <view class="post-content">
+            <view class="post-title-row">
+              <text class="post-title">{{item.title}}</text>
+            </view>
+            <view class="post-meta">
+              <text class="post-time">{{item.time}}</text>
+              <text class="post-status">{{item.statusText}}</text>
+            </view>
+            <view class="post-actions">
+              <view class="action-btn edit" catchtap="editPost" data-id="{{item.id}}">编辑</view>
+              <view class="action-btn delete" catchtap="deletePost" data-id="{{item.id}}">删除</view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,58 @@
+<view class="container">
+  <!-- Custom Top Bar -->
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-content">
+      <view class="back-btn" bindtap="handleBack">
+        <image class="back-icon" src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"></image>
+      </view>
+      <text class="page-title">{{pageTitle}}</text>
+      <view class="placeholder"></view>
+    </view>
+  </view>
+
+  <!-- Tabs (For Completed AND My Help) -->
+  <view class="tabs-header" wx:if="{{currentType === 'completed' || currentType === 'my_help'}}">
+    <view class="tab-item {{currentTab === 'general' ? 'active' : ''}}" bindtap="switchTab" data-tab="general">
+      <text>帮助</text>
+      <view class="indicator" wx:if="{{currentTab === 'general'}}"></view>
+    </view>
+    <view class="tab-item {{currentTab === 'task' ? 'active' : ''}}" bindtap="switchTab" data-tab="task">
+      <text>任务</text>
+      <view class="indicator" wx:if="{{currentTab === 'task'}}"></view>
+    </view>
+  </view>
+
+  <!-- Content List -->
+  <scroll-view class="task-scroll" scroll-y>
+    <view class="task-list">
+      <view class="empty-state" wx:if="{{displayList.length === 0}}">
+        <text>暂无任务</text>
+      </view>
+
+      <view class="task-card" wx:for="{{displayList}}" wx:key="id" bindtap="viewDetail" data-id="{{item.id}}">
+        <view class="card-left">
+          <image class="card-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+        </view>
+        <view class="card-right">
+          <view class="card-header">
+            <text class="card-title">{{item.title}}</text>
+            <text class="card-price" wx:if="{{item.type === 'task'}}">{{item.price}}元</text>
+          </view>
+          <text class="card-desc">{{item.desc}}</text>
+          <view class="card-meta">
+            <text>{{item.time}}</text>
+            <view class="status-tag {{item.status === 'completed' ? 'completed' : 'ongoing'}}">
+              {{item.status === 'completed' ? '已完成' : '进行中'}}
+            </view>
+            <!-- Cancel Button for My Tasks -->
+            <view class="cancel-btn" catchtap="cancelTask" data-id="{{item.id}}" wx:if="{{currentType === 'my_tasks' && item.status !== 'completed'}}">取消</view>
+            
+            <!-- Cancel Button for My Help -->
+            <view class="cancel-btn" catchtap="cancelHelpTask" data-id="{{item.id}}" wx:if="{{currentType === 'my_help' && item.status !== 'completed'}}">放弃</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+</view>

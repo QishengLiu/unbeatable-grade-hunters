@@ -1,0 +1,159 @@
+<view class="container">
+  <!-- 1. Top Navigation -->
+  <view class="navbar" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-content">
+      <view class="back-btn" bindtap="onBack">
+        <image class="back-icon" src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"></image>
+      </view>
+      <text class="page-title">发布任务</text>
+      <view class="submit-btn {{canSubmit ? 'active' : ''}}" bindtap="onSubmit">提交</view>
+    </view>
+  </view>
+
+  <!-- 2. Task Type Switcher -->
+  <view class="type-switcher">
+    <view class="switcher-bg">
+      <view class="switch-item {{taskType === 'general' ? 'active' : ''}}" bindtap="switchType" data-type="general">普通互助</view>
+      <view class="switch-item {{taskType === 'task' ? 'active' : ''}}" bindtap="switchType" data-type="task">任务互助</view>
+    </view>
+  </view>
+
+  <!-- 3. Form Area -->
+  <scroll-view class="form-scroll" scroll-y scroll-into-view="{{scrollId}}" scroll-with-animation>
+    <view class="form-container">
+      
+      <!-- General Help Form -->
+      <block wx:if="{{taskType === 'general'}}">
+        <view class="form-group" id="field-title">
+          <view class="form-label required">互助标题</view>
+          <input class="form-input" placeholder="如“借充电宝一小时”" value="{{formData.title}}" bindinput="onInput" data-field="title" />
+        </view>
+
+        <view class="form-group" id="field-desc">
+          <view class="form-label required">互助描述</view>
+          <textarea class="form-textarea" placeholder="简单描述需求..." value="{{formData.desc}}" bindinput="onInput" data-field="desc" />
+        </view>
+
+        <view class="form-group" id="field-category">
+          <view class="form-label required">互助类型分类</view>
+          <picker mode="selector" range="{{taskCategories}}" range-key="name" bindchange="onCategoryChange">
+            <view class="picker-view">
+              <text class="{{formData.category ? 'text-black' : 'text-gray'}}">{{formData.category || '请选择分类'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class="form-group" id="field-time">
+          <view class="form-label required">截止时间</view>
+          <picker mode="date" bindchange="onDateChange">
+            <view class="picker-view">
+              <text class="{{formData.deadlineDate ? 'text-black' : 'text-gray'}}">{{formData.deadlineDate || '请选择日期（月/日）'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+          <view style="height: 16rpx;"></view>
+          <picker mode="time" bindchange="onHourChange">
+            <view class="picker-view">
+              <text class="{{formData.deadlineHour ? 'text-black' : 'text-gray'}}">{{formData.deadlineHour || '请选择时间（小时）'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class="form-group" id="field-location">
+          <view class="form-label required">服务地点</view>
+          <view class="location-picker" bindtap="chooseLocation">
+            <text class="{{formData.location ? 'text-black' : 'text-gray'}}">{{formData.location || '点击选择地点'}}</text>
+            <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+          </view>
+          <view wx:if="{{formData.latitude && formData.longitude}}" class="latlng-text">
+            <text>纬度：{{formData.latitude}}</text>
+            <text style="margin-left: 24rpx;">经度：{{formData.longitude}}</text>
+          </view>
+        </view>
+
+        <view class="form-group" id="field-contact">
+          <view class="form-label required">联系方式</view>
+          <input class="form-input" placeholder="手机号/微信号" value="{{formData.contact}}" bindinput="onInput" data-field="contact" />
+        </view>
+
+        <view class="safety-tip">
+          <text>温馨提示：请遵守平台规则，注意个人安全。</text>
+        </view>
+      </block>
+
+      <!-- Task Help Form -->
+      <block wx:if="{{taskType === 'task'}}">
+        <view class="form-group" id="field-title">
+          <view class="form-label required">任务标题</view>
+          <input class="form-input" placeholder="如“代买晚餐、取快递”等" value="{{formData.title}}" bindinput="onInput" data-field="title" />
+        </view>
+
+        <view class="form-group" id="field-desc">
+          <view class="form-label required">任务详情描述</view>
+          <textarea class="form-textarea" placeholder="包含要求、具体流程等..." value="{{formData.desc}}" bindinput="onInput" data-field="desc" />
+        </view>
+
+        <view class="form-group" id="field-category">
+          <view class="form-label required">任务类型分类</view>
+          <picker mode="selector" range="{{taskCategories}}" range-key="name" bindchange="onCategoryChange">
+            <view class="picker-view">
+              <text class="{{formData.category ? 'text-black' : 'text-gray'}}">{{formData.category || '请选择分类'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class="form-group" id="field-price">
+          <view class="form-label required">酬金设置 (元)</view>
+          <input class="form-input" type="digit" placeholder="金额≥1" value="{{formData.price}}" bindinput="onInput" data-field="price" />
+        </view>
+
+        <view class="form-group" id="field-time">
+          <view class="form-label required">截止时间</view>
+          <picker mode="date" bindchange="onDateChange">
+            <view class="picker-view">
+              <text class="{{formData.deadlineDate ? 'text-black' : 'text-gray'}}">{{formData.deadlineDate || '请选择日期（月/日）'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+          <view style="height: 16rpx;"></view>
+          <picker mode="time" bindchange="onHourChange">
+            <view class="picker-view">
+              <text class="{{formData.deadlineHour ? 'text-black' : 'text-gray'}}">{{formData.deadlineHour || '请选择时间（小时）'}}</text>
+              <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+            </view>
+          </picker>
+        </view>
+
+        <view class="form-group" id="field-location">
+          <view class="form-label required">服务地点</view>
+          <view class="location-picker" bindtap="chooseLocation">
+            <text class="{{formData.location ? 'text-black' : 'text-gray'}}">{{formData.location || '点击选择地点'}}</text>
+            <image class="arrow-icon" src="https://img.icons8.com/ios-glyphs/30/999999/chevron-right.png"></image>
+          </view>
+          <view wx:if="{{formData.latitude && formData.longitude}}" class="latlng-text">
+            <text>纬度：{{formData.latitude}}</text>
+            <text style="margin-left: 24rpx;">经度：{{formData.longitude}}</text>
+          </view>
+        </view>
+
+        <view class="form-group" id="field-contact">
+          <view class="form-label required">联系方式</view>
+          <input class="form-input" placeholder="手机号/微信号" value="{{formData.contact}}" bindinput="onInput" data-field="contact" />
+        </view>
+        
+        <view class="safety-tip">
+          <text>温馨提示：请遵守平台规则，注意个人安全。</text>
+        </view>
+      </block>
+
+    </view>
+  </scroll-view>
+
+  <!-- Bottom Button -->
+  <view class="bottom-area">
+    <view class="publish-btn {{canSubmit ? 'active' : ''}}" bindtap="onSubmit">立即发布</view>
+  </view>
+</view>

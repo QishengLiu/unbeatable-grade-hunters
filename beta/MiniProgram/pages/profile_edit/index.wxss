@@ -1,0 +1,146 @@
+.container {
+  min-height: 100vh;
+  background-color: #f7f8fb;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 100;
+  padding-bottom: 20rpx;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  position: relative;
+  padding: 0 32rpx;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 20rpx;
+}
+
+.back-btn image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  margin-top: 24rpx;
+  background: #fff;
+  padding: 32rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 32rpx;
+}
+
+.avatar-wrapper {
+  align-self: center;
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  height: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tip {
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 16rpx;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.input-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.label {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.input-item input {
+  background: #f5f7fa;
+  padding: 24rpx;
+  border-radius: 12rpx;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.footer {
+  margin-top: 48rpx;
+  padding: 32rpx;
+}
+
+.save-btn {
+  background: #6A5AE0;
+  color: #fff;
+  border-radius: 48rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  padding: 24rpx 0;
+  box-shadow: 0 8rpx 24rpx rgba(106, 90, 224, 0.3);
+}
+
+.save-btn:active {
+  transform: scale(0.98);
+}

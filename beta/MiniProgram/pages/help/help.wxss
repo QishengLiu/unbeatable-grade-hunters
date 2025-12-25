@@ -1,0 +1,421 @@
+/* pages/help/help.wxss */
+page {
+  --primary-blue: #2b85fc;
+  --bg-light: #f8f9fc;
+  --bg-card: #ffffff;
+  --text-main: #333333;
+  --text-sub: #999999;
+  --active-tag-bg: #2b85fc;
+  --active-tag-text: #ffffff;
+  --inactive-tag-bg: #eef6ff;
+  --inactive-tag-text: #2b85fc;
+  
+  background-color: var(--bg-light);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+.help-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Top Header (Search + Categories) */
+.top-header {
+  background: #fff;
+  padding: 0 32rpx; /* Horizontal padding only */
+  padding-bottom: 20rpx; /* Space after categories */
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.02);
+}
+
+.nav-bar-row {
+  height: 44px; /* Standard Nav Bar Height */
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.search-icon-box {
+  width: 100%; /* Full width for search bar look */
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centered */
+}
+
+.search-icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 16rpx;
+}
+
+.search-placeholder {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #000;
+}
+
+.category-row {
+  margin-top: 10rpx;
+  width: 100%;
+}
+
+.category-scroll {
+  width: 100%;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  height: 80rpx; /* Increased from 60rpx to prevent clipping */
+}
+
+.category-item {
+  display: inline-flex;
+  padding: 10rpx 32rpx;
+  background: var(--inactive-tag-bg);
+  color: var(--inactive-tag-text);
+  border-radius: 32rpx;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.category-item.active {
+  background: var(--active-tag-bg);
+  color: var(--active-tag-text);
+  font-weight: 600;
+}
+
+/* Scroll Content */
+.content-scroll {
+  flex: 1;
+  padding-top: 20rpx;
+}
+
+.section {
+  margin-bottom: 40rpx;
+  padding: 0 32rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24rpx;
+}
+
+.section-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.section-sub {
+  font-size: 24rpx;
+  color: var(--primary-blue);
+}
+
+.section-more {
+  font-size: 26rpx;
+  color: var(--text-sub);
+}
+
+/* 2. Recommended Cards */
+.recommend-scroll {
+  display: flex;
+  white-space: nowrap;
+  padding-bottom: 20rpx; /* Space for shadow */
+  align-items: flex-start; /* Prevent stretching */
+}
+
+.recommend-card {
+  display: inline-block;
+  width: 440rpx; /* Reduced width */
+  background: #fff;
+  border-radius: 24rpx;
+  margin-right: 20rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.04);
+  vertical-align: top;
+  padding-bottom: 30rpx; /* Added padding at bottom */
+  height: auto; /* Ensure no fixed height */
+}
+
+.card-image-area {
+  width: 100%;
+  height: 240rpx; /* Keep image height consistent */
+  position: relative;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.price-tag {
+  position: absolute;
+  top: 16rpx;
+  right: 16rpx;
+  background: rgba(43, 133, 252, 0.9);
+  color: #fff;
+  font-size: 20rpx;
+  padding: 6rpx 16rpx;
+  border-radius: 20rpx;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
+}
+
+.card-content {
+  padding: 20rpx;
+  padding-bottom: 0; /* Let card padding handle bottom space */
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 6rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-desc {
+  font-size: 22rpx;
+  color: #999;
+  margin-bottom: 24rpx;
+  white-space: normal;
+  line-height: 1.4;
+  height: 62rpx; /* Fixed height for 2 lines: 22rpx * 1.4 * 2 ≈ 61.6rpx */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.card-btn {
+  width: 100%;
+  height: 80rpx;
+  border: 2rpx solid var(--primary-blue);
+  border-radius: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.card-btn.accepted {
+  border-color: #ccc;
+  color: #ccc;
+  background: #f5f5f5;
+}
+
+/* 3. Interaction List (My Tasks) */
+.interaction-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.interaction-item {
+  background: #f0f7ff; /* Light blue bg */
+  border-radius: 24rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: center;
+}
+
+.icon-box-blue {
+  width: 80rpx;
+  height: 80rpx;
+  background: rgba(43, 133, 252, 0.1);
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 24rpx;
+}
+
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.item-text-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.item-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6rpx;
+}
+
+.item-sub {
+  font-size: 22rpx;
+  color: #888;
+}
+
+.item-right-col {
+  display: flex;
+  align-items: center;
+}
+
+.item-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  margin-right: 12rpx;
+  border: 2rpx solid #fff;
+}
+
+.arrow-icon {
+  width: 24rpx;
+  height: 24rpx;
+  opacity: 0.5;
+}
+
+/* 4. Tab Switcher & Main List */
+.tab-switcher {
+  display: flex;
+  border-bottom: 1rpx solid #eee;
+  margin-bottom: 20rpx;
+}
+
+.tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  position: relative;
+  font-weight: 500;
+}
+
+.tab-btn.active {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40rpx;
+  height: 4rpx;
+  background: var(--primary-blue);
+  border-radius: 2rpx;
+}
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.list-empty {
+  padding: 40rpx;
+  text-align: center;
+  color: #999;
+  font-size: 26rpx;
+}
+
+.main-item {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 2rpx 8rpx rgba(0,0,0,0.02);
+}
+
+.main-item-left {
+  margin-right: 24rpx;
+}
+
+.main-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.main-item-content {
+  flex: 1;
+}
+
+.main-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.main-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.main-price {
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #FF5E57;
+}
+
+.main-desc {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  line-height: 1.4;
+}
+
+.main-meta {
+  font-size: 22rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  margin: 0 8rpx;
+}
+
+.bottom-spacer {
+  height: 120rpx;
+}
+
+/* Floating Action Button */
+.fab-create {
+  position: fixed;
+  right: 40rpx;
+  bottom: 220rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  background: #3578e5;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.fab-icon {
+  width: 60rpx;
+  height: 60rpx;
+}

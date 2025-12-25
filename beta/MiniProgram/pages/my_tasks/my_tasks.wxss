@@ -1,0 +1,216 @@
+page {
+  background-color: #F5F7FA;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Nav */
+.custom-nav {
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 1rpx 0 rgba(0,0,0,0.05);
+}
+
+.nav-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.page-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.placeholder {
+  width: 60rpx;
+}
+
+/* Tabs */
+.tabs-header {
+  background: #fff;
+  display: flex;
+  height: 88rpx;
+  align-items: center;
+  margin-bottom: 2rpx;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.tab-item.active {
+  color: #3578E5;
+  font-weight: 600;
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0;
+  width: 40rpx;
+  height: 4rpx;
+  background: #3578E5;
+  border-radius: 2rpx;
+}
+
+/* List */
+.task-scroll {
+  flex: 1;
+  padding: 24rpx;
+  /* Add padding bottom if button is visible */
+  padding-bottom: 120rpx; 
+}
+
+.task-list {
+  padding: 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+/* Footer Button */
+.footer-btn-area {
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+  right: 0;
+  padding: 0 32rpx;
+  z-index: 99;
+}
+
+.create-btn {
+  width: 100%;
+  height: 96rpx;
+  background: linear-gradient(135deg, #4E9CF8 0%, #3578E5 100%);
+  border-radius: 48rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8rpx 20rpx rgba(78, 156, 248, 0.3);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 24rpx;
+  padding: 24rpx;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.02);
+}
+
+.card-left {
+  margin-right: 24rpx;
+}
+
+.card-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.card-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8rpx;
+}
+
+.card-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-price {
+  font-size: 28rpx;
+  color: #FF5E57;
+  font-weight: 700;
+}
+
+.card-desc {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 16rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.status-tag {
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  font-size: 22rpx;
+}
+
+.status-tag.ongoing {
+  background: rgba(53, 120, 229, 0.1);
+  color: #3578E5;
+}
+
+.status-tag.completed {
+  background: rgba(76, 217, 100, 0.1);
+  color: #4CD964;
+}
+
+.cancel-btn {
+  margin-left: auto; /* Push to right */
+  padding: 8rpx 20rpx;
+  background: #fff0f0;
+  color: #ff3b30;
+  font-size: 22rpx;
+  border-radius: 20rpx;
+  border: 1rpx solid #ff3b30;
+}

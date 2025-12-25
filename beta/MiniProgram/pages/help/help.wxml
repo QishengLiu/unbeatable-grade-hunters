@@ -1,0 +1,123 @@
+<!-- pages/help/help.wxml -->
+<view class="help-container">
+  
+  <!-- 1. Top Section: Search Icon + Filter Tags -->
+  <view class="top-header" style="padding-top: {{statusBarHeight}}px;">
+    <!-- Row 1: Search / Nav Bar -->
+    <view class="nav-bar-row">
+      <view class="search-icon-box">
+        <text class="search-placeholder">互助中心</text>
+      </view>
+    </view>
+    
+    <!-- Row 2: Categories -->
+    <view class="category-row">
+      <scroll-view class="category-scroll" scroll-x enable-flex show-scrollbar="{{false}}">
+        <view class="category-item {{activeCategory === item.id ? 'active' : ''}}" 
+              wx:for="{{categoryList}}" 
+              wx:key="id"
+              bindtap="onCategoryTap"
+              data-id="{{item.id}}"
+              data-name="{{item.name}}">
+          <text>{{item.name}}</text>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- Content Scroll -->
+  <scroll-view class="content-scroll" scroll-y>
+    
+    <!-- 2. Recommended Section -->
+    <view class="section">
+      <view class="section-header">
+        <text class="section-title">为您推荐</text>
+        <text class="section-sub">智能匹配-成功率98%</text>
+      </view>
+      
+      <scroll-view class="recommend-scroll" scroll-x enable-flex show-scrollbar="{{false}}">
+        <view class="recommend-card" wx:for="{{recommendList}}" wx:key="id" bindtap="onRecommendItemTap" data-id="{{item.id}}">
+          <!-- Top Image Area -->
+          <view class="card-image-area">
+            <image class="card-image" src="{{item.image}}" mode="aspectFill"></image>
+            <view class="price-tag" wx:if="{{currentTab === 'task' && item.price !== undefined && item.price !== null && item.price !== ''}}">
+              {{item.price}}元
+            </view>
+            <view class="price-tag" wx:elif="{{item.price !== undefined && item.price !== null && item.price !== ''}}">
+              {{item.price}}
+            </view>
+          </view>
+          
+          <!-- Card Content -->
+          <view class="card-content">
+            <text class="card-title">{{item.title}}</text>
+            <text class="card-desc">{{item.desc}}</text>
+            
+            <view class="card-btn {{item.isAccepted ? 'accepted' : ''}}" 
+                  catchtap="onTakeOrder" 
+                  data-id="{{item.id}}">
+              <text>{{item.isAccepted ? '已接单' : '立即接单'}}</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+
+    <!-- 3. Interaction Section (Your Interaction) - REMOVED -->
+    <!-- 
+    <view class="section">
+      ...
+    </view> 
+    -->
+
+    <!-- 4. Main List Section -->
+    <view class="section">
+      <!-- Tab Switcher -->
+      <view class="tab-switcher">
+        <view class="tab-btn {{currentTab === 'general' ? 'active' : ''}}" bindtap="onTabChange" data-tab="general">
+          <text>帮助</text>
+          <view class="tab-indicator" wx:if="{{currentTab === 'general'}}"></view>
+        </view>
+        <view class="tab-btn {{currentTab === 'task' ? 'active' : ''}}" bindtap="onTabChange" data-tab="task">
+          <text>任务</text>
+          <view class="tab-indicator" wx:if="{{currentTab === 'task'}}"></view>
+        </view>
+      </view>
+
+      <!-- List Content -->
+      <view class="main-list">
+        <view class="list-empty" wx:if="{{displayList.length === 0}}">
+          <text>暂无相关内容</text>
+        </view>
+        
+        <view class="main-item" wx:for="{{displayList}}" wx:key="id" bindtap="onMainItemTap" data-id="{{item.id}}">
+          <view class="main-item-left">
+            <image class="main-avatar" src="{{item.avatar}}"></image>
+          </view>
+          <view class="main-item-content">
+            <view class="main-title-row">
+              <text class="main-title">{{item.title}}</text>
+              <text class="main-price" wx:if="{{currentTab === 'task'}}">{{item.price}}元</text>
+            </view>
+            <text class="main-desc">{{item.desc}}</text>
+            <view class="main-meta">
+              <text>{{item.time}}</text>
+              <text class="dot">·</text>
+              <text>{{item.user}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- Spacer for TabBar -->
+    <view class="bottom-spacer"></view>
+
+  </scroll-view>
+
+  <!-- Create FAB -->
+  <view class="fab-create" bindtap="onCreateTask">
+    <image class="fab-icon" src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png"></image>
+  </view>
+
+</view>

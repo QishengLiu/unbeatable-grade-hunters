@@ -1,0 +1,359 @@
+/* pages/social/social.wxss */
+page {
+  --bg-color: #F5F5F5;
+  --primary-blue: #3578E5;
+  --card-bg: #FFFFFF;
+  --text-main: #1A1A1A;
+  --text-sub: #666666;
+  --text-light: #999999;
+  --shadow-card: 0 8rpx 24rpx rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 12rpx 32rpx rgba(53, 120, 229, 0.3);
+  
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+.social-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1. Custom Top Bar */
+.custom-top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding-bottom: 20rpx;
+  box-shadow: 0 1rpx 0 rgba(0,0,0,0.05);
+}
+
+.nav-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx;
+}
+
+.nav-left, .nav-right {
+  width: 80rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-icon {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.page-title {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #000;
+  letter-spacing: 1rpx;
+}
+
+/* Scroll Content */
+.main-scroll {
+  flex: 1;
+  height: 100vh;
+}
+
+/* 2. Stories / Hot Clubs */
+.stories-section {
+  padding: 24rpx 0;
+  background: #fff;
+  margin-bottom: 20rpx;
+  border-bottom-left-radius: 32rpx;
+  border-bottom-right-radius: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.02);
+}
+
+.stories-scroll {
+  display: flex;
+  white-space: nowrap;
+  padding-left: 32rpx;
+  height: 160rpx;
+  align-items: center;
+}
+
+.story-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 32rpx;
+}
+
+.story-avatar-ring {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  padding: 4rpx;
+  background: linear-gradient(45deg, #3578E5, #00C6FF); /* Gradient border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12rpx;
+}
+
+.story-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 4rpx solid #fff; /* Inner border */
+}
+
+.story-name {
+  font-size: 24rpx;
+  color: var(--text-main);
+  font-weight: 500;
+  max-width: 120rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 3. Feed Cards */
+.feed-list {
+  padding: 0 24rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.post-card {
+  background: var(--card-bg);
+  border-radius: 32rpx; /* 16px */
+  padding: 32rpx;
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s;
+}
+
+.post-card:active {
+  transform: scale(0.99);
+}
+
+/* Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24rpx;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-container {
+  position: relative;
+  margin-right: 20rpx;
+}
+
+.user-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background: #f0f0f0;
+}
+
+.verified-badge {
+  position: absolute;
+  bottom: 0;
+  right: -6rpx;
+  width: 32rpx;
+  height: 32rpx;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge-icon {
+  width: 16rpx;
+  height: 16rpx;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6rpx;
+}
+
+.user-name {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-right: 12rpx;
+}
+
+.level-tag {
+  font-size: 18rpx;
+  color: #fff;
+  background: linear-gradient(90deg, #FF9966, #FF5E62);
+  padding: 2rpx 10rpx;
+  border-radius: 12rpx;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+}
+
+.post-time {
+  font-size: 24rpx;
+  color: var(--text-light);
+  margin-right: 16rpx;
+}
+
+.category-pill {
+  font-size: 20rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+  font-weight: 500;
+}
+
+.header-right {
+  padding: 10rpx;
+}
+
+.more-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* Body */
+.card-body {
+  margin-bottom: 24rpx;
+}
+
+.post-text {
+  font-size: 30rpx;
+  color: var(--text-main);
+  line-height: 1.6;
+  margin-bottom: 20rpx;
+  display: block;
+}
+
+.media-area {
+  width: 100%;
+  border-radius: 24rpx;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.post-image {
+  width: 100%;
+  display: block;
+}
+
+/* Footer */
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.interaction-item {
+  display: flex;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+  transition: background 0.2s;
+}
+
+.interaction-item:active {
+  background: #f5f5f5;
+}
+
+.interaction-icon {
+  width: 44rpx;
+  height: 44rpx;
+  margin-right: 12rpx;
+  transition: transform 0.2s;
+}
+
+.interaction-icon.liked {
+  animation: heartJump 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.interaction-num {
+  font-size: 26rpx;
+  color: var(--text-sub);
+  font-weight: 500;
+}
+
+.interaction-num.liked-text {
+  color: #FF3B30;
+}
+
+.share {
+  margin-right: 0;
+}
+
+/* Animations */
+@keyframes heartJump {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* Loading & Spacers */
+.loading-state {
+  text-align: center;
+  padding: 40rpx 0;
+  color: var(--text-light);
+  font-size: 24rpx;
+}
+
+.safe-area-gap {
+  height: 180rpx; /* Space for TabBar */
+}
+
+/* FAB */
+.fab-create {
+  position: fixed;
+  bottom: 220rpx; /* Above TabBar + Spacer */
+  right: 32rpx;
+  width: 100rpx;
+  height: 100rpx;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8rpx 20rpx rgba(53, 120, 229, 0.4);
+  z-index: 200;
+  transition: transform 0.2s;
+}
+
+.fab-create:active {
+  transform: scale(0.95);
+}
+
+.fab-icon {
+  width: 50rpx;
+  height: 50rpx;
+}

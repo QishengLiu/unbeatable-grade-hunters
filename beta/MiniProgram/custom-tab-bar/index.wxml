@@ -1,0 +1,16 @@
+<!-- custom-tab-bar/index.wxml -->
+<view class="tab-bar">
+  <view class="tab-glass">
+    <view class="tab-item {{selected === index ? 'active' : ''}} {{item.isSpecial ? 'special' : ''}}" 
+          wx:for="{{list}}" 
+          wx:key="text"
+          bindtap="switchTab"
+          data-path="{{item.pagePath}}"
+          data-index="{{index}}">
+      <view class="tab-icon-box">
+        <image class="tab-icon" src="{{selected === index ? item.selectedIconPath : item.iconPath}}" mode="aspectFit"></image>
+      </view>
+      <text class="tab-text" wx:if="{{!item.isSpecial}}">{{item.text}}</text>
+    </view>
+  </view>
+</view>

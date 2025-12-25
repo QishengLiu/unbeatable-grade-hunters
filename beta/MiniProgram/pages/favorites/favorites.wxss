@@ -1,0 +1,136 @@
+page {
+  background-color: #F5F7FA;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.custom-nav {
+  background: #fff;
+  z-index: 100;
+  box-shadow: 0 1rpx 0 rgba(0,0,0,0.05);
+}
+
+.nav-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32rpx;
+}
+
+.back-btn {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.page-title {
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+.placeholder {
+  width: 60rpx;
+}
+
+.fav-scroll {
+  flex: 1;
+  padding: 24rpx;
+}
+
+.fav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60rpx 0;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.fav-card {
+  background: #fff;
+  border-radius: 24rpx;
+  overflow: hidden;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.02);
+  display: flex;
+}
+
+.fav-cover {
+  width: 220rpx;
+  height: 160rpx;
+}
+
+.fav-content {
+  flex: 1;
+  padding: 20rpx 24rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.fav-title-row {
+  margin-bottom: 10rpx;
+}
+
+.fav-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.fav-meta {
+  font-size: 24rpx;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fav-author {
+  max-width: 160rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fav-dot {
+  margin: 0 8rpx;
+}
+
+.fav-time {
+  flex-shrink: 0;
+}
+
+.fav-actions {
+  display: flex;
+  gap: 16rpx;
+  margin-left: auto;
+}
+
+.fav-cancel-btn {
+  padding: 8rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  background: #fff0f0;
+  color: #ff3b30;
+  border: 1rpx solid #ff3b30;
+}

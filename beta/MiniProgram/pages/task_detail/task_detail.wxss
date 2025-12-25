@@ -1,0 +1,301 @@
+/* pages/task_detail/task_detail.wxss */
+page {
+  --primary-blue: #3578E5;
+  --text-main: #000000;
+  --text-sub: #666666;
+  --text-light: #999999;
+  --bg-color: #F7F9FC;
+  
+  background-color: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+.detail-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* 1. Custom Navigation */
+.custom-nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 88rpx;
+  padding-top: env(safe-area-inset-top);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  background: #fff;
+  z-index: 1000;
+}
+
+.nav-left {
+  padding: 10rpx;
+  display: flex;
+  align-items: center;
+}
+
+.nav-back-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.nav-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 16rpx;
+}
+
+.nav-category {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #000;
+  line-height: 1.2;
+}
+
+.nav-date {
+  font-size: 24rpx;
+  color: #999;
+  margin-top: 4rpx;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* Scroll Area */
+.detail-scroll {
+  flex: 1;
+}
+
+/* 2. Visual Area */
+.visual-area {
+  width: 100%;
+  height: 500rpx; /* Adjust as needed */
+  position: relative;
+  background: #f0f0f0;
+}
+
+.map-bg {
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+
+.character-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 40rpx;
+  width: 300rpx;
+  height: 400rpx;
+  /* background: url(...) or transparent */
+  z-index: 1;
+}
+
+.dots-indicator {
+  position: absolute;
+  bottom: 30rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12rpx;
+  z-index: 2;
+}
+
+.dot {
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.dot.active {
+  background: var(--primary-blue);
+}
+
+/* 3. Main Content Card */
+.content-card {
+  background: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+  margin-top: -40rpx; /* Overlap effect */
+  position: relative;
+  z-index: 10;
+  padding: 48rpx 40rpx;
+  min-height: 600rpx;
+}
+
+.card-header {
+  margin-bottom: 40rpx;
+}
+
+.task-title {
+  display: block;
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 12rpx;
+  line-height: 1.3;
+}
+
+.task-price {
+  font-size: 30rpx;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Info Section */
+.info-section {
+  margin-bottom: 40rpx;
+}
+
+.info-label {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 12rpx;
+}
+
+.info-text {
+  font-size: 28rpx;
+  color: #666;
+  line-height: 1.6;
+  display: block;
+}
+
+/* Publisher Section */
+.publisher-section {
+  margin-bottom: 60rpx;
+}
+
+.publisher-row {
+  display: flex;
+  align-items: center;
+  margin-top: 16rpx;
+}
+
+.publisher-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%; /* Circle or keep raw if illustration style */
+  margin-right: 24rpx;
+  background: #eee;
+}
+
+.publisher-details {
+  flex: 1;
+}
+
+.pub-name-row {
+  margin-bottom: 8rpx;
+}
+
+.pub-name {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #000;
+}
+
+.pub-meta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.star-badge {
+  display: flex;
+  align-items: center;
+  margin-right: 16rpx;
+}
+
+.star-icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-right: 4rpx;
+}
+
+.star-badge text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.pub-activity {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* Action Area */
+.action-area {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 24rpx 32rpx;
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(0,0,0,0.05);
+  z-index: 1000;
+}
+
+.consult-btn {
+  width: 96rpx;
+  height: 96rpx;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4rpx 16rpx rgba(0,0,0,0.06);
+  border: 1rpx solid #eee;
+}
+
+.consult-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 4rpx;
+}
+
+.consult-btn text {
+  font-size: 20rpx;
+  color: #666;
+}
+
+.action-btn-filled {
+  flex: 1;
+  height: 96rpx;
+  background: var(--primary-blue);
+  border-radius: 48rpx; /* Pill shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8rpx 20rpx rgba(53, 120, 229, 0.3);
+}
+
+.action-btn-filled.disabled {
+  background: #ccc;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.bottom-spacer {
+  height: 60rpx;
+}

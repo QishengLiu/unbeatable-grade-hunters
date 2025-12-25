@@ -1,0 +1,5 @@
+{
+  "navigationBarTitleText": "我的动态",
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true
+}

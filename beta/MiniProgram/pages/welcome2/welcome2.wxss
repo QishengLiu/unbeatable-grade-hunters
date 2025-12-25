@@ -1,0 +1,136 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--bg-color);
+  padding: 0;
+}
+
+/* 进度条 */
+.progress-wrapper {
+  width: 100%;
+  height: 8rpx;
+  background: var(--border-color);
+  display: flex;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 100%;
+  background: var(--border-color);
+  position: relative;
+}
+
+.progress-fill {
+  width: 50%;
+  height: 100%;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* Logo部分 */
+.logo-section {
+  display: flex;
+  justify-content: center;
+  padding: 30rpx 0 20rpx 0;
+}
+
+.logo-badge {
+  width: 80rpx;
+  height: 80rpx;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #E64A19 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 40rpx;
+  font-weight: bold;
+  box-shadow: var(--shadow-sm);
+}
+
+/* 标题部分 */
+.header-section {
+  padding: 30rpx 40rpx;
+  text-align: left;
+}
+
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--text-main);
+  margin-bottom: 12rpx;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 28rpx;
+  color: var(--text-placeholder);
+  line-height: 1.4;
+}
+
+/* 选项网格 */
+.options-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24rpx;
+  padding: 0 40rpx;
+  margin-bottom: 40rpx;
+  align-content: start;
+}
+
+.option-card {
+  background: var(--card-bg);
+  border: 2rpx solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 28rpx 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.option-card.selected {
+  background: var(--primary-light);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.option-text {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+  flex: 1;
+  text-align: left;
+}
+
+.option-check {
+  font-size: 32rpx;
+  color: #1e88e5;
+  font-weight: bold;
+  margin-left: 8rpx;
+}
+
+/* 按钮部分 */
+.button-section {
+  padding: 0 40rpx 60rpx 40rpx;
+}
+
+.continue-btn {
+  width: 100%;
+  height: 88rpx;
+  background: #1e88e5 !important;
+  color: white !important;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.continue-btn::after {
+  display: none;
+}

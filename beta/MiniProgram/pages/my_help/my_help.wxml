@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- Custom Navigation Bar -->
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px">
+    <view class="nav-content">
+      <view class="nav-back" bindtap="handleBack">
+        <image class="back-icon" src="/image/箭头.png"></image>
+      </view>
+      <text class="nav-title">我承接的任务</text>
+    </view>
+  </view>
+
+  <!-- Segmented Control -->
+  <view class="segment-control">
+    <view class="segment-item {{currentTab === 0 ? 'active' : ''}}" bindtap="switchTab" data-index="0">普通互助</view>
+    <view class="segment-item {{currentTab === 1 ? 'active' : ''}}" bindtap="switchTab" data-index="1">任务模块</view>
+  </view>
+
+  <!-- Content List -->
+  <view class="list-content">
+    
+    <!-- Ordinary Help List -->
+    <block wx:if="{{currentTab === 0}}">
+      <view class="help-card" wx:for="{{ordinaryHelp}}" wx:key="id">
+        <view class="card-header">
+          <text class="help-title">{{item.title}}</text>
+          <text class="help-status {{item.statusClass}}">{{item.status}}</text>
+        </view>
+        <view class="card-body">
+          <view class="info-row">
+            <text class="label">我的角色：</text>
+            <text class="value">{{item.role}}</text>
+          </view>
+          <text class="help-time">完成时间：{{item.completedTime}}</text>
+        </view>
+      </view>
+    </block>
+
+    <!-- Task Module List -->
+    <block wx:if="{{currentTab === 1}}">
+      <view class="help-card" wx:for="{{moneyHelp}}" wx:key="id">
+        <view class="card-header">
+          <text class="help-title">{{item.title}}</text>
+          <text class="help-price">¥{{item.price}}</text>
+        </view>
+        <view class="card-body">
+          <view class="info-row">
+            <text class="help-status {{item.statusClass}}">{{item.status}}</text>
+          </view>
+          <text class="help-time">完成时间：{{item.completedTime}}</text>
+        </view>
+      </view>
+    </block>
+
+  </view>
+</view>

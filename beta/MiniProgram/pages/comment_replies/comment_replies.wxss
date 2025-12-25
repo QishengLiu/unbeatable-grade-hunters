@@ -1,0 +1,139 @@
+page {
+  background: var(--bg-color);
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+.replies-page {
+  min-height: 100vh;
+}
+ 
+/* 顶部导航栏样式 */
+.top-bar {
+  padding: 24rpx 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--card-bg);
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.bar-back {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.nav-left text {
+  font-size: 28rpx;
+  color: var(--text-main);
+}
+
+.top-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.replies-scroll {
+  height: calc(100vh - 240rpx);
+  padding: 0 40rpx 32rpx;
+}
+
+/* 被回复的评论 */
+.parent-comment {
+  padding: 40rpx 0;
+  border-bottom: 16rpx solid var(--bg-color);
+}
+
+/* 回复列表 */
+.replies-section {
+  padding-top: 40rpx;
+}
+
+.replies-header {
+  margin-bottom: 32rpx;
+}
+
+.replies-count {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.comment-item {
+  display: flex;
+  gap: 24rpx;
+  padding: 32rpx 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comment-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+}
+
+.comment-main {
+  flex: 1;
+}
+
+.comment-head {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+  margin-bottom: 12rpx;
+}
+
+.comment-name {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.comment-time {
+  font-size: 24rpx;
+  color: var(--text-placeholder);
+}
+
+.comment-text {
+  margin: 16rpx 0;
+  font-size: 30rpx;
+  color: var(--text-main);
+  line-height: 1.5;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 40rpx;
+  color: var(--text-secondary);
+  font-size: 26rpx;
+  margin-top: 16rpx;
+}
+
+.comment-action {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.comment-action.liked text {
+  color: #ff4d6d;
+}
+
+.comment-icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.load-more, .no-more {
+  text-align: center;
+  padding: 32rpx;
+  font-size: 28rpx;
+  color: var(--text-placeholder);
+}
