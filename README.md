@@ -93,7 +93,7 @@
 | [![张君锋](./image/张君锋.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/96SL%PK@Q~]ORWUEK88B%DG.png)张君锋052204124ENTJ | “希望自己能够尽一份力，从中能够学到一些内容。”               | 拥有量化方面的专长，全能型组员，无论是何种岗位都能积极适应，凭借自身对健身的热情，能为项目带来不一样的活力。 |
 | [![卢铃颖](./image/卢铃颖.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%7B(K28]%60Q2%7D%%%60X7%60C0)1485.png)卢铃颖102301105ENFP | “行百里者半九十”                                             | 掌握 Python、C / C++ 技术，渴望尝试不同软工角色，丰富的兴趣让其思维开阔，能为项目带来多元化的解决方案。 |
 
-## 5. 队员风采
+## 5. 项目风采
 
 ###  特色功能一：完整可跑通的业务流程的校园论坛
 
