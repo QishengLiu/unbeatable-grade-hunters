@@ -107,7 +107,7 @@
 
 **展示截图 / 视频：**
 
-![95245b22d4242c0a0120c273b0106118](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\95245b22d4242c0a0120c273b0106118.png)
+(./image/Show1.png)
 
 ------
 
@@ -122,7 +122,7 @@
 
 **展示截图 / 视频：**
 
-![c390bbfdad24ae7e2cd93b0eb767e3a5](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\c390bbfdad24ae7e2cd93b0eb767e3a5.png)
+(./image/Show2.png)
 
 ------
 
@@ -140,9 +140,11 @@
 
 **展示截图 / 视频：**
 
-![cea8a1bcc3bd19964779eec2c44abe38](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\cea8a1bcc3bd19964779eec2c44abe38.png)
+- 用户端AI发帖助手
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225213512566-141760684.png)
 
-
+- 管理端AI审核
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225214701669-870398265.png)
 
 ## 6.团队成员项目收获
 
