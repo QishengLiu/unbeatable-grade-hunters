@@ -75,24 +75,27 @@
 
 ## 4. 队员风采
 
-| 队长介绍                                                     |                              |                                                              |
-| ------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------ |
-| [![刘琦晟](./image/刘琦晟.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/{OEN4CPUOMHQ_GXN8O@4{XL.png)刘琦晟102301227INFJ组长 | “也许有一天我也成为全栈大佬” | 全能型组长，擅长Vue，致力于我组后端 UI 的开发，对于打游戏、睡觉、旅游、摄影方面有着独到见解。 |
+### 队长介绍
 
-| 队员介绍                                                     |                                                              |                                                              |
-| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [![陈泽荣](./image/陈泽荣.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/Z`3TM7010`R02SD@9F{QNZM.png)陈泽荣102301438ESFJ | “干巴爹&”                                                    | 有前端设计经验，可在前端、UI 或其他灵活分配的岗位工作，游戏爱好培养了交互的敏感性，丰富的经验能确保使其能出色完成。 |
-| [![赵鑫鑫](./image/赵鑫鑫.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/3N~XJ]K$[L6J@223C[H$4K5.png)赵鑫鑫102301512LMIS | “干就完了”                                                   | 期望成为后端开发工程师，以沉稳的态度投入到后端开发工作中，在休息好的状态下高效地完成代码编写和系统搭建任务。 |
-| [![王心宏](./image/王心宏.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/W[2(LF_788R)0VTKYG]A0UH.png)王心宏102301522ESFP | “跟对人，走对路，做对事。”                                   | 擅长 Python 数据科学栈、Java 后端开发及算法，倾向后端工作，运动和音乐爱好让其保持良好的身心状态，提供稳定的技术支持。 |
-| [![李帅](./image/李帅.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/E}T]5K)李帅172309011ESTJ | “感谢”                                                       | 熟悉 java 后端技术，从事后端开发，爱好音乐使其在音乐熏陶下在编程时更具创造力和耐心，不断优化后端代码和功能。 |
-| [![李玥彤](./image/李玥彤.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/OOG2[3A7BJXW5HSJ`R[R0HH.png)李玥彤102301106ESFP | “以赤子之心探未知之境，用恒久之志开未来之局。”               | 擅长 HTML、CSS、JavaScript 技术，专注于前端开发，平常爱好看电影，在电影的熏陶下，能更好地把握色彩搭配、页面布局。 |
-| [![贺之梅](./image/贺之梅.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%KJNN@DYDTS~KBAT%0%60I@RH.png)贺之梅102301108INFJ | “明白自己在学习上还需要更多的主动性和耐心，技术成长是一个持续积累的过程。” | 熟练掌握 C、C++ 编程语言，投身于前端开发工作。在阅读中积累知识、从电影里获取灵感，都巧妙地融入到前端开发中。 |
-| ![俞欢殷](./image/俞欢殷.png)俞欢殷102301303ISTP             | “十分荣幸参与这个项目”                                       | 拥有潜水这项独特技能，热衷于羽毛球、画画和音乐，致力成为一名好组员，凭借其特殊技能，为团队带来创新的视角和积极氛围。 |
-| ![丁浚哲](./image/丁浚哲.png)丁浚哲102301437INFJ             | “纳尼纳尼，怎怎瓦嘎乃。”                                     | 擅长平面设计，希望负责前端工作，对明日方舟的热爱使其更了解年轻用户的喜好，能够将这种理解融入到前端平面设计中。 |
-| [![孙其煜](./image/孙其煜.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/NJ1$WXHFDYSOI%W5BKIWS77.png)孙其煜052201142INFP | “代码如诗，逻辑如画。在0与1的世界里，每一次调试都是与真理的对话。” | 具备全能的技术能力，致力于前端开发工作，在打游戏的过程中或许能获取独特的设计灵感，助力打造更具交互性的前端界面。 |
-| [![张君锋](./image/张君锋.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/96SL%PK@Q~]ORWUEK88B%DG.png)张君锋052204124ENTJ | “希望自己能够尽一份力，从中能够学到一些内容。”               | 拥有量化方面的专长，全能型组员，无论是何种岗位都能积极适应，凭借自身对健身的热情，能为项目带来不一样的活力。 |
-| [![卢铃颖](./image/卢铃颖.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%7B(K28]%60Q2%7D%%%60X7%60C0)1485.png)卢铃颖102301105ENFP | “行百里者半九十”                                             | 掌握 Python、C / C++ 技术，渴望尝试不同软工角色，丰富的兴趣让其思维开阔，能为项目带来多元化的解决方案。 |
+| 头像                                                         | 姓名   | 个人名言                     | 个人介绍                                                     |
+| ------------------------------------------------------------ | ------ | ---------------------------- | ------------------------------------------------------------ |
+| [![刘琦晟](./image/刘琦晟.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/OEN4CPUOMHQ_GXN8O@4{XL.png) | 刘琦晟 | “也许有一天我也成为全栈大佬” | 全能型组长，擅长Vue，致力于我组后端 UI 的开发，对于打游戏、睡觉、旅游、摄影方面有着独到见解。 |
 
+### 队员介绍
+
+| 头像                                                         | 姓名   | 学号      | 性格类型 | 个人名言                                                     | 个人介绍                                                     |
+| ------------------------------------------------------------ | ------ | --------- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [![陈泽荣](./image/陈泽荣.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/Z%603TM7010%60R02SD@9F{QNZM.png) | 陈泽荣 | 102301438 | ESFJ     | “干巴爹&”                                                    | 有前端设计经验，可在前端、UI 或其他灵活分配的岗位工作，游戏爱好培养了交互的敏感性，丰富的经验能确保使其能出色完成。 |
+| [![赵鑫鑫](./image/赵鑫鑫.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/3N~XJ]K$[L6J@223C[H$4K5.png) | 赵鑫鑫 | 102301512 | LMIS     | “干就完了”                                                   | 期望成为后端开发工程师，以沉稳的态度投入到后端开发工作中，在休息好的状态下高效地完成代码编写和系统搭建任务。 |
+| [![王心宏](./image/王心宏.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/W[2(LF_788R)0VTKYG]A0UH.png) | 王心宏 | 102301522 | ESFP     | “跟对人，走对路，做对事。”                                   | 擅长 Python 数据科学栈、Java 后端开发及算法，倾向后端工作，运动和音乐爱好让其保持良好的身心状态，提供稳定的技术支持。 |
+| [![李帅](./image/李帅.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/E}T]5K) | 李帅   | 172309011 | ESTJ     | “感谢”                                                       | 熟悉 java 后端技术，从事后端开发，爱好音乐使其在音乐熏陶下在编程时更具创造力和耐心，不断优化后端代码和功能。 |
+| [![李玥彤](./image/李玥彤.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/OOG2[3A7BJXW5HSJ`R[R0HH.png) | 李玥彤 | 102301106 | ESFP     | “以赤子之心探未知之境，用恒久之志开未来之局。”               | 擅长 HTML、CSS、JavaScript 技术，专注于前端开发，平常爱好看电影，在电影的熏陶下，能更好地把握色彩搭配、页面布局。 |
+| [![贺之梅](./image/贺之梅.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%KJNN@DYDTS~KBAT%0%60I@RH.png) | 贺之梅 | 102301108 | INFJ     | “明白自己在学习上还需要更多的主动性和耐心，技术成长是一个持续积累的过程。” | 熟练掌握 C、C++ 编程语言，投身于前端开发工作。在阅读中积累知识、从电影里获取灵感，都巧妙地融入到前端开发中。 |
+| ![俞欢殷](./image/俞欢殷.png)                                | 俞欢殷 | 102301303 | ISTP     | “十分荣幸参与这个项目”                                       | 拥有潜水这项独特技能，热衷于羽毛球、画画和音乐，致力成为一名好组员，凭借其特殊技能，为团队带来创新的视角和积极氛围。 |
+| ![丁浚哲](./image/丁浚哲.png)                                | 丁浚哲 | 102301437 | INFJ     | “纳尼纳尼，怎怎瓦嘎乃。”                                     | 擅长平面设计，希望负责前端工作，对明日方舟的热爱使其更了解年轻用户的喜好，能够将这种理解融入到前端平面设计中。 |
+| [![孙其煜](./image/孙其煜.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/NJ1$WXHFDYSOI%W5BKIWS77.png) | 孙其煜 | 052201142 | INFP     | “代码如诗，逻辑如画。在0与1的世界里，每一次调试都是与真理的对话。” | 具备全能的技术能力，致力于前端开发工作，在打游戏的过程中或许能获取独特的设计灵感，助力打造更具交互性的前端界面。 |
+| [![张君锋](./image/张君锋.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/96SL%PK@Q~]ORWUEK88B%DG.png) | 张君锋 | 052204124 | ENTJ     | “希望自己能够尽一份力，从中能够学到一些内容。”               | 拥有量化方面的专长，全能型组员，无论是何种岗位都能积极适应，凭借自身对健身的热情，能为项目带来不一样的活力。 |
+| [![卢铃颖](./image/卢铃颖.png)](https://github.com/QishengLiu/unbeatable-grade-hunters/blob/main/image/%7B(K28]%60Q2%7D%%%60X7%60C0)1485.png) | 卢铃颖 | 102301105 | ENFP     | “行百里者半九十”                                             | 掌握 Python、C / C++ 技术，渴望尝试不同软工角色，丰富的兴趣让其思维开阔，能为项目带来多元化的解决方案。 |
 ## 5. 项目风采
 
 ###  特色功能一：完整可跑通的业务流程的校园论坛
@@ -107,7 +110,7 @@
 
 **展示截图 / 视频：**
 
-![95245b22d4242c0a0120c273b0106118](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\95245b22d4242c0a0120c273b0106118.png)
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225213449451-1543027022.png)
 
 ------
 
@@ -122,7 +125,7 @@
 
 **展示截图 / 视频：**
 
-![c390bbfdad24ae7e2cd93b0eb767e3a5](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\c390bbfdad24ae7e2cd93b0eb767e3a5.png)
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225213512566-141760684.png)
 
 ------
 
@@ -140,9 +143,11 @@
 
 **展示截图 / 视频：**
 
-![cea8a1bcc3bd19964779eec2c44abe38](D:\Program Files\QQ\Tencent Files\2576883361\nt_qq\nt_data\Pic\2025-12\Ori\cea8a1bcc3bd19964779eec2c44abe38.png)
+- 用户端AI发帖助手
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225213512566-141760684.png)
 
-
+- 管理端AI审核
+![image](https://img2024.cnblogs.com/blog/3289581/202512/3289581-20251225214701669-870398265.png)
 
 ## 6.团队成员项目收获
 
