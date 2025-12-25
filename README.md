@@ -1,4 +1,4 @@
-<img width="1119" height="780" alt="image" src="https://github.com/user-attachments/assets/fa6ca026-6afb-454b-ac4a-098316f440cb" /># 以太校园——多智能体驱动的校园信息整合平台
+# 以太校园——多智能体驱动的校园信息整合平台
 
 ------
 
