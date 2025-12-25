@@ -1,0 +1,68 @@
+{
+  "pages": [
+
+    "pages/welcome2/welcome2",
+
+    "pages/index/index",
+    "pages/help/help",
+    "pages/welcome1/welcome1",
+    "pages/forget/forget",
+    
+    "pages/social/social",
+    "pages/post_detail/post_detail",
+    "pages/post_create/post_create",
+    "pages/task_detail/task_detail",
+    
+    "pages/package/package",
+    "pages/login/login",
+    "pages/logs/logs",
+    
+    
+    "pages/chat/chat",
+    "pages/register/register",
+    "pages/profile/profile",
+    "pages/setting/setting",
+    "pages/comment_replies/comment_replies"
+  
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "AetherNet",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/首页.png",
+        "selectedIconPath": "image/首页1.png"
+      },
+      {
+        "pagePath": "pages/social/social",
+        "text": "动态",
+        "iconPath": "image/动态.png",
+        "selectedIconPath": "image/动态1.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "互助",
+        "iconPath": "image/互助.png",
+        "selectedIconPath": "image/互助1.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "image/我的.png",
+        "selectedIconPath": "image/我的1.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

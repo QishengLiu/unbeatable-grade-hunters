@@ -1,0 +1,85 @@
+<view class="replies-page">
+  <view class="status-bar">
+    <text class="status-time">{{status.time}}</text>
+    <view class="status-icons">
+      <view class="signal">
+        <view class="signal-bar bar-1"></view>
+        <view class="signal-bar bar-2"></view>
+        <view class="signal-bar bar-3"></view>
+        <view class="signal-bar bar-4"></view>
+      </view>
+      <view class="battery">
+        <view class="battery-body"></view>
+        <view class="battery-head"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 顶部导航栏 -->
+  <view class="top-bar">
+    <view class="nav-left" bindtap="goBack">
+      <image class="bar-back" src="{{assets.back}}" mode="aspectFit"></image>
+    </view>
+    <text class="top-title">回复</text>
+  </view>
+
+  <scroll-view class="replies-scroll" scroll-y>
+    <!-- 被回复的评论 -->
+    <view class="parent-comment" wx:if="{{parentComment}}">
+      <view class="comment-item">
+        <image class="comment-avatar" src="{{parentComment.avatar}}" mode="aspectFill"></image>
+        <view class="comment-main">
+          <view class="comment-head">
+            <text class="comment-name">{{parentComment.name}}</text>
+            <text class="comment-time">{{parentComment.time}}</text>
+          </view>
+          <text class="comment-text">{{parentComment.content}}</text>
+          <view class="comment-actions">
+            <view class="comment-action">
+              <image class="comment-icon" src="{{parentComment.liked ? assets.likeActive : assets.likeOutline}}" mode="aspectFit"></image>
+              <text>{{parentComment.likesDisplay}}</text>
+            </view>
+            <view class="comment-action">
+              <image class="comment-icon" src="{{assets.commentGray}}" mode="aspectFit"></image>
+              <text>{{parentComment.replyDisplay}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 回复列表 -->
+    <view class="replies-section">
+      <view class="replies-header">
+        <text class="replies-count">{{replies.length}}条回复</text>
+      </view>
+      
+      <view class="replies-list">
+        <view class="comment-item" wx:for="{{replies}}" wx:key="id">
+          <image class="comment-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+          <view class="comment-main">
+            <view class="comment-head">
+              <text class="comment-name">{{item.name}}</text>
+              <text class="comment-time">{{item.time}}</text>
+            </view>
+            <text class="comment-text">{{item.content}}</text>
+            <view class="comment-actions">
+              <view class="comment-action" catchtap="likeReply" data-id="{{item.id}}">
+                <image class="comment-icon" src="{{item.liked ? assets.likeActive : assets.likeOutline}}" mode="aspectFit"></image>
+                <text>{{item.likesDisplay}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+        
+        <view class="load-more" wx:if="{{loading}}">
+          <text>加载中...</text>
+        </view>
+        
+        <view class="no-more" wx:elif="{{!hasMore && replies.length > 0}}">
+          <text>没有更多回复了</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

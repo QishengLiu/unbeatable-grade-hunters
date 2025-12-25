@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "快递详情",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "usingComponents": {},
+  "pageOrientation": "portrait"
+}

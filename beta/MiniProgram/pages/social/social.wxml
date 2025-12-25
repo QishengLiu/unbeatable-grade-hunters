@@ -1,0 +1,100 @@
+<view class="social-page">
+  
+  <!-- 1. Top Navigation (Custom) -->
+  <view class="custom-top-bar" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-content">
+      <view class="nav-left" bindtap="onSearch">
+        <image class="nav-icon" src="https://img.icons8.com/ios-glyphs/60/000000/search--v1.png"></image>
+      </view>
+      <text class="page-title">SocialLink</text>
+      <!-- Right side reserved for Capsule Button -->
+      <view class="nav-right"></view>
+    </view>
+  </view>
+
+  <!-- Content Scroll -->
+  <scroll-view class="main-scroll" scroll-y bindscrolltolower="loadMore">
+    
+    <!-- Spacer for fixed header -->
+    <view style="height: {{statusBarHeight + 60}}px;"></view>
+
+    <!-- 3. Feed Cards -->
+    <view class="feed-list">
+      <block wx:for="{{postList}}" wx:key="id">
+        <view class="post-card" bindtap="openPost" data-id="{{item.id}}">
+          
+          <!-- Header -->
+          <view class="card-header">
+            <view class="header-left">
+              <view class="avatar-container">
+                <image class="user-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+                <view class="verified-badge">
+                  <image class="badge-icon" src="https://img.icons8.com/ios-filled/20/ffffff/checkmark.png"></image>
+                </view>
+              </view>
+              <view class="user-info">
+                <view class="name-row">
+                  <text class="user-name">{{item.author}}</text>
+                  <view class="level-tag">Lv.5</view>
+                </view>
+                <view class="meta-row">
+                  <text class="post-time">{{item.meta}}</text>
+                  <view class="category-pill" style="background: {{item.tag === '互助' ? '#E3F2FD' : '#F3E5F5'}}; color: {{item.tag === '互助' ? '#2196F3' : '#9C27B0'}};">
+                    {{item.tag}}
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="header-right" catchtap="showMore" data-id="{{item.id}}">
+              <image class="more-icon" src="https://img.icons8.com/ios-glyphs/30/999999/more.png"></image>
+            </view>
+          </view>
+
+          <!-- Body -->
+          <view class="card-body">
+            <text class="post-text">{{item.content}}</text>
+            <!-- Image Area -->
+            <view class="media-area" wx:if="{{item.image}}">
+              <image class="post-image" src="{{item.image}}" mode="widthFix" lazy-load></image>
+            </view>
+          </view>
+
+          <!-- Footer -->
+          <view class="card-footer">
+            <view class="interaction-item" catchtap="likePost" data-id="{{item.id}}">
+              <image class="interaction-icon {{item.liked ? 'liked' : ''}}" 
+                     src="{{item.liked ? 'https://img.icons8.com/ios-filled/50/FF3B30/like.png' : 'https://img.icons8.com/ios/50/666666/like.png'}}">
+              </image>
+              <text class="interaction-num {{item.liked ? 'liked-text' : ''}}">{{item.likesDisplay}}</text>
+            </view>
+            
+            <view class="interaction-item" catchtap="commentPost" data-id="{{item.id}}">
+              <image class="interaction-icon" src="https://img.icons8.com/ios/50/666666/speech-bubble.png"></image>
+              <text class="interaction-num">{{item.commentsDisplay}}</text>
+            </view>
+            
+            <view class="interaction-item share" catchtap="sharePost" data-id="{{item.id}}">
+              <image class="interaction-icon" src="https://img.icons8.com/ios/50/666666/paper-plane.png"></image>
+            </view>
+          </view>
+
+        </view>
+      </block>
+      
+      <!-- Loading State -->
+      <view class="loading-state">
+        <text wx:if="{{loading}}">加载精彩内容...</text>
+        <text wx:elif="{{hasMore}}">上滑发现更多</text>
+        <text wx:else>— 到底啦 —</text>
+      </view>
+      
+      <view class="safe-area-gap"></view>
+    </view>
+  </scroll-view>
+
+  <!-- Create FAB -->
+  <view class="fab-create" bindtap="createPost">
+    <image class="fab-icon" src="https://img.icons8.com/ios-filled/50/ffffff/plus-math.png"></image>
+  </view>
+
+</view>

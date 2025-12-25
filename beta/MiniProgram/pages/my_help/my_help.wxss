@@ -1,0 +1,152 @@
+page {
+  background-color: #f6f7fb;
+}
+
+.container {
+  padding: 0 30rpx 20rpx;
+}
+
+/* Custom Navigation */
+.custom-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+  margin-left: -30rpx;
+  margin-right: -30rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: content-box;
+  margin-bottom: 20rpx;
+}
+
+.nav-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav-back {
+  padding: 10rpx 20rpx 10rpx 0;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  width: 32rpx;
+  height: 32rpx;
+  transform: rotate(180deg);
+}
+
+.nav-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Segmented Control */
+.segment-control {
+  display: flex;
+  background-color: #e8ebf2;
+  border-radius: 40rpx;
+  padding: 8rpx;
+  margin-bottom: 30rpx;
+}
+
+.segment-item {
+  flex: 1;
+  text-align: center;
+  padding: 16rpx 0;
+  font-size: 28rpx;
+  color: #666;
+  border-radius: 32rpx;
+  transition: all 0.3s;
+}
+
+.segment-item.active {
+  background-color: #ffffff;
+  color: var(--primary-color, #6A5AE0);
+  font-weight: bold;
+  box-shadow: 0 4rpx 12rpx rgba(106, 90, 224, 0.15);
+}
+
+/* Card Styles */
+.help-card {
+  background-color: #ffffff;
+  border-radius: 28rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+  box-shadow: 0 8rpx 24rpx rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20rpx;
+}
+
+.help-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  flex: 1;
+  margin-right: 20rpx;
+}
+
+.help-price {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: var(--primary-color, #6A5AE0); /* Theme color for price */
+}
+
+/* Status Styles */
+.help-status {
+  font-size: 24rpx;
+  padding: 4rpx 12rpx;
+  border-radius: 8rpx;
+}
+
+.status-completed {
+  color: #10B981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.status-paid {
+  color: #F59E0B;
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.card-body {
+  /* No special styles needed yet */
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.label {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.value {
+  font-size: 26rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.help-time {
+  display: block;
+  font-size: 24rpx;
+  color: #999;
+}

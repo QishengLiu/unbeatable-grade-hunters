@@ -1,0 +1,147 @@
+page {
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.register-page {
+  padding: 48rpx 40rpx 120rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.page-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: #111111;
+}
+
+.page-desc {
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.card {
+  background: #ffffff;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 24rpx;
+  padding: 36rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  box-shadow: 0 16rpx 32rpx rgba(0, 0, 0, 0.06);
+}
+
+.field-input {
+  width: 100%;
+  height: 88rpx;
+  border-radius: 16rpx;
+  border: 1rpx solid #e5e7eb;
+  padding: 0 24rpx;
+  font-size: 30rpx;
+  color: #111111;
+  background: #ffffff;
+}
+
+.field-input:focus {
+  border-color: #1e88e5;
+  background: #ffffff;
+}
+
+.field-input.active {
+  border-color: #1e88e5;
+  background: #ffffff;
+}
+
+.placeholder {
+  color: #999999;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24rpx;
+  color: #1e88e5;
+}
+
+.agreement {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  font-size: 24rpx;
+  color: #666666;
+  align-items: center;
+}
+
+.agreement-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.agreement-checkbox {
+  transform: scale(1.2);
+  accent-color: #1e88e5;
+  margin-right: 8rpx;
+}
+
+.agreement-link {
+  color: #1e88e5;
+  text-decoration: underline;
+}
+
+/* 添加按钮相关样式 */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-top: 20rpx;
+}
+
+.primary-button {
+  width: 100%;
+  height: 88rpx;
+  background: #1e88e5;
+  border-radius: 16rpx;
+  color: white;
+  font-size: 32rpx;
+  font-weight: 500;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-button:disabled {
+  background: #cccccc;
+  color: #666666;
+}
+
+.primary-button.loading {
+  background: #1976d2;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 8rpx;
+  font-size: 26rpx;
+  color: #666666;
+}
+
+.link {
+  color: #1e88e5;
+}

@@ -1,0 +1,36 @@
+<view class="container">
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-content">
+      <view class="back-btn" bindtap="handleBack">
+        <image class="back-icon" src="https://img.icons8.com/ios-glyphs/30/000000/chevron-left.png"></image>
+      </view>
+      <text class="page-title">我的收藏</text>
+      <view class="placeholder"></view>
+    </view>
+  </view>
+
+  <scroll-view class="fav-scroll" scroll-y>
+    <view class="empty-state" wx:if="{{favorites.length === 0 && !loading}}">
+      <text>暂无收藏</text>
+    </view>
+
+    <block wx:for="{{favorites}}" wx:key="favoriteId">
+      <view class="fav-card" bindtap="viewDetail" data-post-id="{{item.postId}}">
+        <image class="fav-cover" src="{{item.cover}}" mode="aspectFill"></image>
+        <view class="fav-content">
+          <view class="fav-title-row">
+            <text class="fav-title">{{item.title}}</text>
+          </view>
+          <view class="fav-meta">
+            <text class="fav-author">{{item.author}}</text>
+            <text class="fav-dot">·</text>
+            <text class="fav-time">{{item.time}}</text>
+            <view class="fav-actions">
+              <view class="fav-cancel-btn" catchtap="cancelFavorite" data-id="{{item.favoriteId}}">取消收藏</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

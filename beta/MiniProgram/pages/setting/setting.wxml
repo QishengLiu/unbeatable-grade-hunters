@@ -1,0 +1,57 @@
+<view class="settings-container">
+  
+
+  <!-- Settings options list -->
+  <view class="settings-list">
+    <view class="settings-item" bindtap="handleSettings" data-type="profile">
+      <text class="item-label">个人信息设置</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="storage">
+      <text class="item-label">储存空间管理</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="notification">
+      <text class="item-label">通知</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="appearance">
+      <text class="item-label">外观</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="experiment">
+      <text class="item-label">实验室</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="agreement">
+      <text class="item-label">用户协议与隐私政策</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+
+    <view class="settings-item" bindtap="handleSettings" data-type="about">
+      <text class="item-label">关于我们</text>
+      <image class="item-arrow-img" src="/image/箭头.png" mode="aspectFit"></image>
+    </view>
+  </view>
+
+  <view class="logout-section">
+    <button class="logout-btn" bindtap="handleLogout">退出登录</button>
+  </view>
+
+  <!-- Bottom navigation -->
+  <view class="bottom-nav">
+    <view class="nav-item" bindtap="goBackToProfile">
+      <image class="nav-icon-img" src="/image/回到我的.png" mode="aspectFit"></image>
+      <text class="nav-label">返回我的</text>
+    </view>
+    <view class="nav-item active">
+      <image class="nav-icon-img" src="/image/设置.png" mode="aspectFit"></image>
+      <text class="nav-label">设置</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,243 @@
+/* Login Page Styles */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 0;
+}
+
+/* Status bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rpx 30rpx;
+  height: 40rpx;
+  background: transparent;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.status-icons {
+  display: flex;
+  font-size: 24rpx;
+}
+
+.status-icons text + text {
+  margin-left: 8rpx;
+}
+
+/* Character illustration */
+.illustration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350rpx;
+  padding: 40rpx 0;
+  background: transparent;
+}
+
+.character-image {
+  width: 100%;
+  height: 100%;
+  max-width: 400rpx;
+}
+
+/* Form container */
+.form-container {
+  flex: 1;
+  background: #fff;
+  border-radius: 40rpx 40rpx 0 0;
+  padding: 50rpx 40rpx;
+  box-shadow: 0 -4rpx 20rpx rgba(0, 0, 0, 0.08);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50rpx;
+}
+
+.header .logo-badge {
+  margin-left: 20rpx;
+}
+
+.title {
+  font-size: 44rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.logo-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b9d 0%, #ff8a9b 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 32rpx;
+  box-shadow: 0 4rpx 12rpx rgba(255, 107, 157, 0.4);
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  height: 80rpx;
+  border: 1rpx solid #e5e7eb;
+  border-radius: 16rpx;
+  padding: 0 24rpx;
+  margin-bottom: 30rpx;
+  font-size: 28rpx;
+  color: #333;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #1e88e5;
+  box-shadow: 0 0 0 4rpx rgba(30, 136, 229, 0.08);
+}
+
+.placeholder-text {
+  color: #999;
+  font-size: 28rpx;
+}
+
+/* Password input wrapper */
+.password-input-wrapper {
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.password-input {
+  padding-right: 80rpx;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+/* Forgot password */
+.forgot-password {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 40rpx;
+}
+
+.forgot-password text {
+  color: #1e88e5;
+  font-size: 26rpx;
+  text-decoration: none;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  height: 88rpx;
+  background: #1e88e5;
+  color: #fff;
+  border: none;
+  border-radius: 20rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+  box-shadow: 0 6rpx 18rpx rgba(30, 136, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+.login-btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 2rpx 8rpx rgba(91, 158, 249, 0.2);
+}
+
+/* Sign up link */
+.signup-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.signup-link text + text {
+  margin-left: 8rpx;
+}
+
+.signup-text {
+  color: #ff6b9d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Other login methods */
+.other-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.other-methods .social-icons {
+  margin-top: 30rpx;
+}
+
+.methods-title {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons .social-icon + .social-icon {
+  margin-left: 40rpx;
+}
+
+.social-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  transition: all 0.3s ease;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:active {
+  transform: scale(0.9);
+}
+
+.social-icon.wechat {
+  background: #e84430;
+}
+
+.social-icon.qq {
+  background: #1a1a1a;
+}
+
+.social-icon.email {
+  background: #2196f3;
+}

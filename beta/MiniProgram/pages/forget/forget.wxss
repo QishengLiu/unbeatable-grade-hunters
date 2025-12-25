@@ -1,0 +1,225 @@
+page {
+  background: linear-gradient(135deg, var(--bg-color) 0%, #E3F2FD 100%);
+  min-height: 100vh;
+}
+
+.forget-page {
+  padding: 120rpx 40rpx 120rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 40rpx;
+  color: var(--text-main);
+  position: relative;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.page-title {
+  font-size: 48rpx;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 2rpx;
+  text-shadow: var(--shadow-sm);
+}
+
+.page-desc {
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: var(--radius-lg);
+  padding: 48rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 36rpx;
+  box-shadow: var(--shadow-lg);
+  backdrop-filter: blur(10rpx);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4rpx);
+  box-shadow: 0 16rpx 48rpx rgba(0, 0, 0, 0.12);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  transition: all 0.3s ease;
+}
+
+.field:focus-within {
+  transform: translateX(4rpx);
+}
+
+.field-label {
+  font-size: 28rpx;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.field:focus-within .field-label {
+  color: var(--primary-color);
+}
+
+.field-input {
+  height: 96rpx;
+  border-radius: var(--radius-md);
+  border: 2rpx solid var(--border-color);
+  padding: 0 28rpx;
+  font-size: 32rpx;
+  background: var(--card-bg);
+  color: var(--text-main);
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2rpx 4rpx rgba(0, 0, 0, 0.05);
+}
+
+.field-input:focus {
+  border-color: var(--primary-color);
+  background: var(--card-bg);
+  box-shadow: inset 0 2rpx 8rpx rgba(74, 144, 226, 0.1);
+  transform: scale(1.01);
+}
+
+.placeholder {
+  color: var(--text-placeholder);
+}
+
+.code-row {
+  display: flex;
+  gap: 24rpx;
+  align-items: center;
+}
+
+.code-input {
+  flex: 1;
+}
+
+.code-btn {
+  width: 240rpx;
+  height: 96rpx;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.code-btn:hover:not([disabled]) {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #0d47a1 100%);
+  transform: translateY(-2rpx);
+  box-shadow: var(--shadow-lg);
+}
+
+.code-btn:active:not([disabled]) {
+  transform: translateY(0);
+}
+
+.code-btn[disabled] {
+  background: var(--border-color);
+  box-shadow: none;
+  color: var(--text-placeholder);
+}
+
+.primary-btn {
+  width: 100%;
+  height: 100rpx;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+  color: #ffffff;
+  font-size: 36rpx;
+  font-weight: 600;
+  border: none;
+  margin-top: 20rpx;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  letter-spacing: 4rpx;
+}
+
+.primary-btn:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #0d47a1 100%);
+  transform: translateY(-2rpx);
+  box-shadow: var(--shadow-lg);
+}
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+.helper-text {
+  text-align: center;
+  font-size: 28rpx;
+  color: var(--text-secondary);
+  margin-top: 16rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8rpx;
+}
+
+.link {
+  color: var(--primary-color);
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2rpx;
+  width: 0;
+  height: 2rpx;
+  background: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.link:hover {
+  color: var(--primary-dark);
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+/* 添加一些动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.forget-page {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.card {
+  animation: fadeIn 0.8s ease-out;
+  animation-delay: 0.2s;
+  animation-fill-mode: both;
+}

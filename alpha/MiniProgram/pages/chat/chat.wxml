@@ -1,0 +1,63 @@
+<!-- pages/chat/chat.wxml -->
+<view class="chat-container">
+
+<!-- 聊天内容区域 -->
+<scroll-view class="chat-messages" scroll-y="true" scroll-into-view="{{scrollToMessage}}" bindscroll="onScroll">
+  <!-- 聊天记录 -->
+  <view class="message-list">
+    <view class="message-item" id="message-1">
+      <image class="avatar-other" src="/image/other_avatar.png"></image>
+      <view class="message-bubble-other">
+        <text class="message-text">你好，感谢接单</text>
+      </view>
+    </view>
+
+    <view class="message-item" id="message-2">
+      <image class="avatar-other" src="/image/other_avatar.png"></image>
+      <view class="message-bubble-other">
+        <text class="message-text">你什么时候到？我在哪里等你？</text>
+      </view>
+    </view>
+
+    <view class="message-item message-item-mine" id="message-3">
+      <view class="message-bubble-mine">
+        <text class="message-text">我5分钟后到图书馆</text>
+      </view>
+      <image class="avatar-mine" src="/image/my_avatar.png"></image>
+    </view>
+
+    <view class="message-item message-item-mine" id="message-4">
+      <view class="message-bubble-mine">
+        <text class="message-text">可以在一楼自习室门口见吗</text>
+      </view>
+      <image class="avatar-mine" src="/image/my_avatar.png"></image>
+    </view>
+
+    <view class="message-item" id="message-5">
+      <image class="avatar-other" src="/image/other_avatar.png"></image>
+      <view class="message-bubble-other">
+        <text class="message-text">可以的，到数计后找陈泽荣就可以😊</text>
+      </view>
+    </view>
+
+    <!-- 新消息输入区域 -->
+    <view class="message-item message-item-mine" id="last-message">
+      <view class="message-bubble-mine">
+        <text class="message-text">明白，我马上就到</text>
+      </view>
+      <image class="avatar-mine" src="/image/my_avatar.png"></image>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 输入区域 -->
+<view class="input-area">
+  <view class="input-left">
+    <view class="plus-button" bindtap="showMoreActions">+</view>
+    <input class="chat-input" placeholder="输入消息" value="{{inputContent}}" bindinput="onInput" bindfocus="onInputFocus" bindblur="onInputBlur"></input>
+  </view>
+  <view class="send-button" bindtap="sendMessage">
+    <text class="send-icon">→</text>
+  </view>
+</view>
+</view>

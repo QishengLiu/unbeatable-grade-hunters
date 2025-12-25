@@ -1,0 +1,42 @@
+<view class="container">
+  <!-- 插画区域 -->
+  <view class="illustration-section">
+    <image 
+      src="/images/welcome-characters.png" 
+      class="illustration" 
+      mode="aspectFit"
+    />
+  </view>
+
+  <!-- 导航指示器 -->
+  <view class="pagination">
+    <view class="dot active"></view>
+    <view class="dot"></view>
+  </view>
+
+  <!-- 内容区域 -->
+  <view class="content-section">
+    <view class="welcome-title">欢迎来到<view class="brand">以太校园 AetherNet</view></view>
+    
+    <view class="welcome-description">
+      以太校园致力于便捷同学们的校园生活，跟着我，让你更好地在校园生活中帮助你吧！
+    </view>
+
+    <view class="feature-list">
+      <block wx:for="{{features}}" wx:key="title">
+        <view class="feature-item">
+          <text class="feature-icon">{{item.icon}}</text>
+          <view class="feature-info">
+            <view class="feature-title">{{item.title}}</view>
+            <view class="feature-desc">{{item.desc}}</view>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="button-section">
+    <button class="continue-btn" bindtap="handleContinue">继续</button>
+  </view>
+</view>

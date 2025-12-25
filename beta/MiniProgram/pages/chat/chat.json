@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "聊天详情",
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationStyle": "custom",
+  "disableScroll": false,
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": false
+}

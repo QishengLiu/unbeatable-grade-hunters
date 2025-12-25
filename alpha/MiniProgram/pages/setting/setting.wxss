@@ -1,0 +1,154 @@
+/* pages/setting/setting.wxss */
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 0;
+}
+
+/* Status bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8rpx 30rpx;
+  height: 40rpx;
+  background: transparent;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.time {
+  font-weight: bold;
+  font-size: 28rpx;
+}
+
+.status-icons {
+  display: flex;
+  gap: 8rpx;
+  font-size: 24rpx;
+}
+
+/* Profile header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  padding: 40rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #e5e7eb;
+}
+
+.avatar-container {
+  position: relative;
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.verification-badge {
+  position: absolute;
+  bottom: -4rpx;
+  right: -4rpx;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  background: #1e88e5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20rpx;
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8rpx;
+}
+
+.username {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.role {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* Settings list */
+.settings-list {
+  flex: 1;
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.settings-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28rpx 40rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  transition: background 0.3s ease;
+}
+
+.settings-item:active {
+  background: #f5f7fa;
+}
+
+.item-label {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: 500;
+}
+
+.item-arrow-img {
+  width: 28rpx;
+  height: 28rpx;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100rpx;
+  background: #fff;
+  border-top: 1rpx solid #f0f0f0;
+  padding-bottom: 20rpx;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+  padding: 8rpx;
+  flex: 1;
+}
+
+.nav-item.active {
+  color: #1e88e5;
+}
+
+.nav-icon-img {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.nav-label {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.nav-item.active .nav-label {
+  color: #1e88e5;
+}

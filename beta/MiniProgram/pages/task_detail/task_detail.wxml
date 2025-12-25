@@ -1,0 +1,97 @@
+<!-- pages/task_detail/task_detail.wxml -->
+<view class="detail-container">
+  
+  <!-- 1. Custom Navigation -->
+  <view class="custom-nav" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-left" bindtap="onBack">
+      <image class="nav-back-icon" src="https://img.icons8.com/ios-filled/50/3578E5/left.png"></image>
+    </view>
+    <view class="nav-content">
+      <text class="nav-date">{{task.date}}</text>
+    </view>
+    <view class="nav-right">
+      <text class="nav-count">{{task.sameCategoryCount}} 同类互助</text>
+    </view>
+  </view>
+
+  <scroll-view class="detail-scroll" scroll-y="true">
+    
+    <!-- 2. Visual Area (Map + Character) -->
+    <view class="visual-area">
+      <map class="map-bg" 
+           latitude="{{mapLatitude}}" 
+           longitude="{{mapLongitude}}" 
+           scale="16" 
+           markers="{{markers}}" 
+           show-location></map>
+      <!-- Character Overlay Removed or Adjusted if needed, Map is main now -->
+      <!-- <view class="character-overlay"></view> -->
+    </view>
+
+    <!-- 3. Main Content Card -->
+    <view class="content-card">
+      
+      <!-- Title & Price -->
+      <view class="card-header">
+        <text class="task-title">{{task.title}}</text>
+        <text class="task-price">{{task.price}}</text>
+      </view>
+
+      <!-- Remarks -->
+      <view class="info-section">
+        <text class="info-label">任务描述</text>
+        <text class="info-text">{{task.description}}</text>
+      </view>
+
+      <view class="info-section">
+        <text class="info-label">服务地点</text>
+        <text class="info-text">{{task.location}}</text>
+      </view>
+
+      <view class="info-section">
+        <text class="info-label">联系方式</text>
+        <text class="info-text">{{task.contactInfo}}</text>
+      </view>
+
+      <view class="info-section">
+        <text class="info-label">截止时间</text>
+        <text class="info-text">{{task.deadline}}</text>
+      </view>
+
+      <!-- Publisher -->
+      <view class="publisher-section">
+        <text class="info-label">发布者</text>
+        <view class="publisher-row">
+          <image class="publisher-avatar" src="{{task.publisher.avatar}}" mode="aspectFill"></image>
+          <view class="publisher-details">
+            <view class="pub-name-row">
+              <text class="pub-name">{{task.publisher.nickname}}</text>
+            </view>
+            <view class="pub-meta-row">
+              <view class="star-badge">
+                <image class="star-icon" src="https://img.icons8.com/ios-filled/50/3578E5/star--v1.png"></image>
+                <text>星级用户</text>
+              </view>
+              <text class="pub-activity">近7天发布10次</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+    
+    <view class="bottom-spacer" style="height: 180rpx;"></view>
+
+  </scroll-view>
+
+  <!-- Action Button -->
+  <view class="action-area">
+    <view class="consult-btn" bindtap="onConsult">
+      <image class="consult-icon" src="https://img.icons8.com/ios-filled/50/666666/speech-bubble--v1.png"></image>
+      <text>咨询</text>
+    </view>
+    <view class="action-btn-filled" bindtap="onAccept" wx:if="{{!isMine}}">确认接单</view>
+    <view class="action-btn-filled disabled" wx:if="{{isPublisher}}">无法接单</view>
+  </view>
+
+</view>

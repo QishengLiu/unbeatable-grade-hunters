@@ -1,0 +1,114 @@
+<view class="profile-page">
+  <!-- 1. 顶部个人信息卡片 -->
+  <view class="hero-card">
+    <view class="hero-content">
+      <view class="avatar-container">
+        <image class="avatar" src="{{userInfo.avatar}}" mode="aspectFill"></image>
+        <view class="avatar-glow"></view>
+      </view>
+      <view class="user-info">
+        <text class="username">{{userInfo.username}}</text>
+        <view class="role-tag">
+          <text>校园互助 · 已认证</text>
+        </view>
+        <view class="credit-badge level-{{userInfo.creditLevel}}">
+          <text class="credit-icon">⭐</text>
+          <text class="credit-text">信誉分：{{userInfo.creditScore}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 2. 我的数据（四象限卡片） - REMOVED per user request -->
+  <!-- 
+  <view class="stats-grid">
+    <view class="stat-card" bindtap="handleManagement" data-type="my_tasks">
+      <view class="stat-icon-bg bg-blue">
+        <image class="stat-icon" src="/image/订单查询.png"></image>
+      </view>
+      <view class="stat-info">
+        <text class="stat-label">我的任务</text>
+        <text class="stat-value">{{userInfo.stats.myTasks}} 条</text>
+      </view>
+    </view>
+    <view class="stat-card" bindtap="handleManagement" data-type="my_help">
+      <view class="stat-icon-bg bg-purple">
+        <image class="stat-icon" src="/image/互助.png"></image>
+      </view>
+      <view class="stat-info">
+        <text class="stat-label">我的帮助</text>
+        <text class="stat-value">{{userInfo.stats.myHelp}} 条</text>
+      </view>
+    </view>
+    <view class="stat-card">
+      <view class="stat-icon-bg bg-orange">
+        <image class="stat-icon" src="/image/历史记录.png"></image>
+      </view>
+      <view class="stat-info">
+        <text class="stat-label">正在进行</text>
+        <text class="stat-value">{{userInfo.stats.ongoing}} 条</text>
+      </view>
+    </view>
+    <view class="stat-card" bindtap="handleManagement" data-type="completed">
+      <view class="stat-icon-bg bg-green">
+        <image class="stat-icon" src="/image/我的收藏.png"></image>
+      </view>
+      <view class="stat-info">
+        <text class="stat-label">已完成</text>
+        <text class="stat-value">{{userInfo.stats.completed}} 条</text>
+      </view>
+    </view>
+  </view>
+  -->
+
+  <!-- 3. 任务管理模块 -->
+  <view class="section-container">
+    <view class="section-header">
+      <text class="section-title">任务管理</text>
+    </view>
+    <view class="menu-list">
+      <block wx:for="{{taskManagementItems}}" wx:key="type">
+        <view class="menu-item" bindtap="handleManagement" data-type="{{item.type}}">
+          <view class="menu-left">
+            <image class="menu-icon" src="{{item.icon}}" mode="aspectFit"></image>
+            <view class="menu-text-group">
+              <text class="menu-label">{{item.label}}</text>
+            </view>
+          </view>
+          <image class="menu-arrow" src="/image/箭头.png" mode="aspectFit"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 4. 个人管理模块 -->
+  <view class="section-container">
+    <view class="section-header">
+      <text class="section-title">个人管理</text>
+    </view>
+    <view class="menu-list">
+      <block wx:for="{{shortcuts}}" wx:key="type">
+        <view class="menu-item" bindtap="handleManagement" data-type="{{item.type}}">
+          <view class="menu-left">
+            <image class="menu-icon" src="{{item.icon}}" mode="aspectFit"></image>
+            <view class="menu-text-group">
+              <text class="menu-label">{{item.label}}</text>
+              <text class="menu-desc" wx:if="{{item.desc}}">{{item.desc}}</text>
+            </view>
+          </view>
+          <image class="menu-arrow" src="/image/箭头.png" mode="aspectFit"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 5. 底部操作区 -->
+  <view class="bottom-actions">
+    <view class="action-btn" bindtap="handleQuickAction" data-action="edit">
+      <text>编辑资料</text>
+    </view>
+    <view class="action-btn" bindtap="handleQuickAction" data-action="help">
+      <text>帮助中心</text>
+    </view>
+  </view>
+</view>

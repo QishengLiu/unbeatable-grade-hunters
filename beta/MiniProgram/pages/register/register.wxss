@@ -1,0 +1,149 @@
+page {
+  background: var(--bg-color);
+  min-height: 100vh;
+}
+
+.register-page {
+  padding: 48rpx 40rpx 120rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 32rpx;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  gap: 12rpx;
+}
+
+.page-title {
+  font-size: 44rpx;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.page-desc {
+  font-size: 26rpx;
+  color: var(--text-secondary);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 2rpx solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 36rpx;
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  box-shadow: var(--shadow-sm);
+}
+
+.field-input {
+  width: 100%;
+  height: 88rpx;
+  border-radius: var(--radius-md);
+  border: 2rpx solid var(--border-color);
+  padding: 0 24rpx;
+  font-size: 30rpx;
+  color: var(--text-main);
+  background: var(--bg-color);
+}
+
+.field-input:focus {
+  border-color: var(--primary-color);
+  background: #ffffff;
+}
+
+.field-input.active {
+  border-color: var(--primary-color);
+  background: #ffffff;
+}
+
+.placeholder {
+  color: var(--text-placeholder);
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle {
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24rpx;
+  color: var(--primary-color);
+}
+
+.agreement {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rpx;
+  font-size: 24rpx;
+  color: var(--text-secondary);
+  align-items: center;
+}
+
+.agreement-label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8rpx;
+}
+
+.agreement-checkbox {
+  transform: scale(1.2);
+  accent-color: var(--primary-color);
+  margin-right: 8rpx;
+}
+
+.agreement-link {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+/* 添加按钮相关样式 */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24rpx;
+  margin-top: 20rpx;
+}
+
+.primary-button {
+  width: 100%;
+  height: 88rpx;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  border-radius: var(--radius-full);
+  color: white;
+  font-size: 32rpx;
+  font-weight: 500;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+}
+
+.primary-button:disabled {
+  background: #cccccc;
+  color: #666666;
+  box-shadow: none;
+}
+
+.primary-button.loading {
+  background: var(--primary-dark);
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 8rpx;
+  font-size: 26rpx;
+  color: var(--text-secondary);
+}
+
+.link {
+  color: var(--primary-color);
+}

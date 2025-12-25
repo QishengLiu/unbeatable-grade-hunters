@@ -1,0 +1,85 @@
+<view class="login-container">
+  
+  <image class="bg-image" src="/image/背景.jpg" mode="aspectFill"></image>
+
+  <!-- Character illustration container -->
+  <view class="illustration-container">
+    <image 
+      src="/images/characters.png" 
+      mode="aspectFit"
+      class="character-image"
+    />
+  </view>
+
+  <!-- Login form section -->
+  <view class="form-container">
+    <view class="header">
+      <text class="title">登录</text>
+      
+    </view>
+
+    <!-- Phone/ID input -->
+    <input
+      class="input-field"
+      placeholder="手机号码/学号"
+      placeholder-class="placeholder-text"
+      type="text"
+      bindinput="bindPhoneInput"
+      value="{{phone}}"
+    />
+
+    <!-- Password input -->
+    <view class="password-input-wrapper">
+      <input
+        class="input-field password-input"
+        placeholder="密码"
+        placeholder-class="placeholder-text"
+        type="{{showPassword ? 'text' : 'password'}}"
+        bindinput="bindPasswordInput"
+        value="{{password}}"
+      />
+      <view 
+        class="password-toggle"
+        bindtap="togglePasswordVisibility"
+      >
+        <text>{{showPassword ? '👁️' : '👁️‍🗨️'}}</text>
+      </view>
+    </view>
+
+    <!-- Forgot password link -->
+    <view class="forgot-password">
+      <text bindtap="handleForgotPassword">忘记密码？</text>
+    </view>
+
+    <!-- Login button -->
+    <button 
+      class="login-btn"
+      bindtap="handleLogin"
+      loading="{{loading}}"
+    >
+      登录
+    </button>
+
+    <!-- Sign up link -->
+    <view class="signup-link">
+      <text>没有账号？</text>
+      <text class="signup-text" bindtap="goToSignup">现在注册</text>
+    </view>
+
+    <!-- Other login methods -->
+    <view class="other-methods">
+      <text class="methods-title">使用其他登录方式</text>
+      <view class="social-icons">
+        <view class="social-icon wechat" bindtap="loginByWechat">
+          <text>💬</text>
+        </view>
+        <view class="social-icon qq" bindtap="loginByQQ">
+          <text>🎮</text>
+        </view>
+        <view class="social-icon email" bindtap="loginByEmail">
+          <text>✉️</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

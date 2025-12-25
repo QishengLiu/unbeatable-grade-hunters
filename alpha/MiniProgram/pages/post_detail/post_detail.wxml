@@ -1,0 +1,144 @@
+<view class="detail-page">
+  <view class="status-bar">
+    <text class="status-time">{{status.time}}</text>
+    <view class="status-icons">
+      <view class="signal">
+        <view class="signal-bar bar-1"></view>
+        <view class="signal-bar bar-2"></view>
+        <view class="signal-bar bar-3"></view>
+        <view class="signal-bar bar-4"></view>
+      </view>
+      <view class="battery">
+        <view class="battery-body"></view>
+        <view class="battery-head"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 顶部导航栏 -->
+  <view class="top-bar">
+    <view class="nav-left" bindtap="goBack">
+      <image class="bar-back" src="{{assets.back}}" mode="aspectFit"></image>
+    </view>
+    <text class="top-title">帖子详情</text>
+    <image class="bar-more" src="{{assets.share}}" mode="aspectFit" bindtap="sharePost"></image>
+  </view>
+
+  <view class="detail-content">
+    <scroll-view class="detail-scroll" scroll-y enable-flex="true">
+      <view class="post-area">
+        <view class="post-header">
+          <image class="author-avatar" src="{{post.authorAvatar}}" mode="aspectFill"></image>
+          <view class="author-meta">
+            <text class="author-name">{{post.author}}</text>
+            <text class="author-tag">{{post.categoryName}}</text>
+          </view>
+          <text class="post-time">{{post.time}}</text>
+        </view>
+
+        <text class="post-content">{{post.content}}</text>
+        
+        <!-- 多图展示 -->
+        <block wx:if="{{post.images && post.images.length > 0}}">
+          <!-- 单张图片 -->
+          <image wx:if="{{post.images.length === 1}}" class="post-hero" src="{{post.images[0]}}" mode="aspectFill"></image>
+          
+          <!-- 多张图片九宫格展示 -->
+          <view wx:elif="{{post.images.length > 1}}" class="images-grid">
+            <view class="images-col-3">
+              <image wx:for="{{post.images}}" wx:key="index" class="grid-image" src="{{item}}" mode="aspectFill"></image>
+            </view>
+          </view>
+        </block>
+
+        <view class="stat-row">
+          <view class="stat-item" catchtap="likePost">
+            <image class="stat-icon" src="{{post.liked ? assets.likeActive : assets.like}}" mode="aspectFit"></image>
+            <text class="stat-number">{{post.likesDisplay}}</text>
+          </view>
+          <view class="stat-item" catchtap="commentPost">
+            <image class="stat-icon small" src="{{assets.commentGray}}" mode="aspectFit"></image>
+            <text class="stat-number">{{post.commentsDisplay}}</text>
+          </view>
+          <view class="stat-item" catchtap="sharePost">
+            <image class="stat-icon small" src="{{assets.planeGray}}" mode="aspectFit"></image>
+            <text class="stat-number">{{post.shareDisplay}}</text>
+          </view>
+        </view>
+      </view>
+
+      <view class="comment-section">
+        <view class="comment-header">
+          <text class="comment-title">全部评论</text>
+          <text class="comment-count">{{post.commentsDisplay}}条</text>
+        </view>
+        
+        <view class="comment-list">
+          <view class="comment-item" wx:for="{{comments}}" wx:key="id">
+            <image class="comment-avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+            <view class="comment-main">
+              <view class="comment-head">
+                <text class="comment-name">{{item.name}}</text>
+                <text class="comment-time">{{item.time}}</text>
+              </view>
+              <text class="comment-text">{{item.content}}</text>
+              <view class="comment-actions">
+                <view class="comment-action" catchtap="likeComment" data-id="{{item.id}}">
+                  <image class="comment-icon" src="{{item.liked ? assets.likeActive : assets.likeOutline}}" mode="aspectFit"></image>
+                  <text>{{item.likesDisplay}}</text>
+                </view>
+                <view class="comment-action" bindtap="replyComment" data-id="{{item.id}}">
+                  <image class="comment-icon" src="{{assets.commentGray}}" mode="aspectFit"></image>
+                  <text>回复</text>
+                </view>
+              </view>
+              <!-- 查看回复按钮 -->
+              <view class="view-replies" wx:if="{{item.replyCount > 0}}" bindtap="viewReplies" data-id="{{item.id}}">
+                <text class="replies-text">查看{{item.replyCount}}条回复</text>
+                <text class="arrow">></text>
+              </view>
+            </view>
+          </view>
+          
+          <view class="load-more-comments" wx:if="{{loadingComments}}">
+            <text>加载中...</text>
+          </view>
+          
+          <view class="no-more-comments" wx:elif="{{!hasMoreComments && comments.length > 0}}">
+            <text>没有更多评论了</text>
+          </view>
+        </view>
+      </view>
+      
+      <view class="safe-padding"></view>
+    </scroll-view>
+  </view>
+
+  <!-- 评论输入弹窗 -->
+  <view class="comment-modal" wx:if="{{showCommentModal}}">
+    <view class="comment-overlay" bindtap="hideCommentModal"></view>
+    <view class="comment-container">
+      <view class="comment-header">
+        <text class="cancel-btn" bindtap="hideCommentModal">取消</text>
+        <text class="publish-btn {{commentContent.length > 0 ? 'active' : ''}}" 
+              bindtap="publishComment">发布</text>
+      </view>
+      <textarea class="comment-input" 
+                placeholder="请输入评论内容..." 
+                maxlength="500"
+                value="{{commentContent}}"
+                bindinput="onCommentInput"
+                auto-height></textarea>
+    </view>
+  </view>
+
+  <view class="reply-bar">
+    <view class="input-dummy" bindtap="showCommentModal">
+      <text class="placeholder">说点什么吧...</text>
+    </view>
+    <view class="bar-icons">
+      <image src="{{assets.commentGray}}" mode="aspectFit" bindtap="showCommentModal"></image>
+      <image src="{{assets.planeGray}}" mode="aspectFit" bindtap="sharePost"></image>
+    </view>
+  </view>
+</view>

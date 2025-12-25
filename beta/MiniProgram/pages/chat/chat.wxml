@@ -1,0 +1,61 @@
+<!-- pages/chat/chat.wxml -->
+<view class="chat-container">
+  
+  <!-- Custom Navigation -->
+  <view class="custom-nav">
+    <view class="nav-left" bindtap="onBack">
+      <image class="nav-back-icon" src="https://img.icons8.com/ios/50/333333/left.png"></image>
+      <view class="nav-user-info">
+        <image class="nav-avatar" src="{{targetUser.avatar}}" mode="aspectFill"></image>
+        <view class="nav-text">
+          <text class="nav-name">{{targetUser.nickname}}</text>
+          <text class="nav-task">任务: {{targetUser.taskName}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- Chat Content -->
+  <scroll-view class="chat-messages" scroll-y="true" scroll-into-view="{{scrollToMessage}}" enable-flex="true">
+    <view class="message-list">
+      <block wx:for="{{messages}}" wx:key="id">
+        
+        <!-- Other's Message -->
+        <view class="message-item other" wx:if="{{item.type === 'other'}}" id="message-{{item.id}}">
+          <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+          <view class="bubble other">
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+
+        <!-- My Message -->
+        <view class="message-item me" wx:if="{{item.type === 'me'}}" id="message-{{item.id}}">
+          <view class="bubble me">
+            <text>{{item.content}}</text>
+          </view>
+          <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+        </view>
+
+      </block>
+    </view>
+  </scroll-view>
+
+  <!-- Input Area -->
+  <view class="input-area">
+    <view class="input-wrapper">
+      <view class="action-btn" bindtap="showMoreActions">
+        <image class="action-icon" src="https://img.icons8.com/ios/50/999999/plus-math.png"></image>
+      </view>
+      <input class="chat-input" 
+             placeholder="" 
+             value="{{inputContent}}" 
+             bindinput="onInput" 
+             confirm-type="send" 
+             bindconfirm="sendMessage" />
+      <view class="send-btn" bindtap="sendMessage">
+        <image class="send-icon" src="https://img.icons8.com/fluency-systems-filled/48/ffffff/paper-plane.png"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

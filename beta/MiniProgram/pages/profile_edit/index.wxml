@@ -1,0 +1,66 @@
+<view class="container">
+  <view class="header" style="padding-top: {{statusBarHeight}}px;">
+    <view class="nav-bar">
+      <view class="back-btn" bindtap="onBack">
+        <image src="/image/箭头.png" mode="aspectFit" style="transform: rotate(180deg);"></image>
+      </view>
+      <text class="title">个人信息设置</text>
+    </view>
+  </view>
+
+  <view class="content" style="margin-top: {{statusBarHeight + 44}}px;">
+    <!-- Avatar Section -->
+    <view class="section">
+      <text class="section-title">头像设置</text>
+      <view class="avatar-wrapper" bindtap="chooseAvatar">
+        <image class="avatar" src="{{userInfo.avatar || '/image/默认头像.jpg'}}" mode="aspectFill"></image>
+        <view class="edit-icon">
+          <image src="/image/设置.png" mode="aspectFit" style="width: 32rpx; height: 32rpx; filter: invert(1);"></image>
+        </view>
+      </view>
+      <text class="tip">点击头像进行修改</text>
+    </view>
+
+    <!-- Nickname Section -->
+    <view class="section">
+      <text class="section-title">基本信息</text>
+      <view class="form-group">
+        <view class="input-item">
+          <text class="label">昵称</text>
+          <input type="nickname" placeholder="请输入昵称" value="{{userInfo.username}}" bindinput="onNicknameInput" />
+        </view>
+        <view class="input-item">
+          <text class="label">手机号</text>
+          <input type="number" placeholder="请输入手机号" value="{{userInfo.phone}}" bindinput="onPhoneInput" />
+        </view>
+        <view class="input-item">
+          <text class="label">邮箱</text>
+          <input type="text" placeholder="请输入邮箱" value="{{userInfo.email}}" bindinput="onEmailInput" />
+        </view>
+      </view>
+    </view>
+
+    <!-- Password Section -->
+    <view class="section">
+      <text class="section-title">修改密码</text>
+      <view class="form-group">
+        <view class="input-item">
+          <text class="label">旧密码</text>
+          <input type="password" placeholder="请输入旧密码" value="{{oldPassword}}" bindinput="onOldPasswordInput" />
+        </view>
+        <view class="input-item">
+          <text class="label">新密码</text>
+          <input type="password" placeholder="请输入新密码" value="{{newPassword}}" bindinput="onNewPasswordInput" />
+        </view>
+        <view class="input-item">
+          <text class="label">确认密码</text>
+          <input type="password" placeholder="请再次输入新密码" value="{{confirmPassword}}" bindinput="onConfirmPasswordInput" />
+        </view>
+      </view>
+    </view>
+
+    <view class="footer">
+      <button class="save-btn" bindtap="saveChanges">保存修改</button>
+    </view>
+  </view>
+</view>
